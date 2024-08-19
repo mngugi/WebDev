@@ -1,10 +1,12 @@
+<!DOCTYPE html>
 <!-- this is page15.html code -->
 <!--index.html is the main page -->
 <!-- Author: Peter Mwangi-->
-<!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Tables Empty-cell</title>
     <style>
          table {
                 border-collapse: collapse;
@@ -25,42 +27,42 @@
 
          
     </style>
-   
+
 </head>
 
 <h2> Tables Example 2 EmptyCells-Show and Excercise 2 </h2>
 
 <table style="empty-cells: show;">
-    <tr>
+    <tbody>
+    <tr scope="cols">
         <th> Header1  </th>
         <th> Header2 </th>
         <th> Header3</th>
-        
+
     </tr>
     <tr>
         <td> Data1  </td>
         <td> Data2 </td>
-        
-        
-    </tr>
 
+    </tr>
+</tbody>
 </table>
 
 <h2>Tables Example 3 EmptyCells-Hide and Excercise 3 </h2>
 
 <table style="empty-cells: hide;" >
-    <tr></tr>
-        <th> Header1  </th>
-        <th> Header2 </th>
-        <th> Header3 </th>
-        <th> </th>
+    <tr>
+        <th scope="col"> Header1 </th>
+        <th scope="col"> Header2 </th>
+        <th scope="col"> Header3 </th>
+        <th scope="col"> </th>
     </tr>
 
-    <tr></tr>
+    <tr>
         <td> Data1  </td>
         <td> Data2 </td>
         <td>  </td>
-        
+
     </tr>
 
 
