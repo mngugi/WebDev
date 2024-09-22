@@ -2,11 +2,12 @@ h1{
 
     color:aquamarine ;
     font-size: 1.6rem;
+    background-color: rgb(40, 39, 41);
 }
 
 h2 {
         
-    color:rgb(8, 221, 150);
+    color:rgb(4, 175, 118);
     font-size: 1.4rem;
 
 }
@@ -17,7 +18,9 @@ h3 {
     font-size: 1.2rem;
 }
 
-
+h4{
+    font-size: 1.0rem;
+}
 
 html {
 
@@ -26,7 +29,10 @@ html {
     font-size: 2.5ex;
 }
 
-div {
+a:visited {
+    color: green;
+}
 
-
+a:link {
+    color: green;
 }
