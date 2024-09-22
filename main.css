@@ -1,15 +1,32 @@
 h1{
 
     color:aquamarine ;
+    font-size: 1.6rem;
 }
 
 h2 {
         
     color:rgb(8, 221, 150);
+    font-size: 1.4rem;
 
 }
 
 h3 {
 
     color: #84e603;
+    font-size: 1.2rem;
+}
+
+
+
+html {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    font-size: 2.5ex;
+}
+
+div {
+
+
 }
