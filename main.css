@@ -52,3 +52,16 @@ a:link {
 div {
     background-color:  #DAF7A6 ;
   }
+
+table  {border-collapse: collapse;
+        width: 90%;
+        margin: 20px;
+}
+td, th {padding: 6px;
+        text-align: left;
+
+} 
+
+th {background-color: #DAF7A6;}
+
+td {background-color: #fff7A6;}
