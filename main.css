@@ -11,20 +11,19 @@ h1 {
     background-color: rgba(1, 31, 18, 0.815);
 }
 
-h2, h3, h4 {
-    background-color: rgb(2, 58, 35);
-}
-
 h2 {
     font-size: 1.4rem;
+    background-color: rgb(2, 58, 35);
 }
 
 h3 {
     font-size: 1.2rem;
+    background-color: rgb(2, 58, 35);
 }
 
 h4 {
     font-size: 1.0rem;
+    background-color: rgb(2, 58, 35);
 }
 
 /* Global font settings */
@@ -59,13 +58,8 @@ td, th {
     text-align: left;
 }
 
-th {
-    background-color: #DAF7A6;
-}
-
-td {
-    background-color: #fff7A6;
-}
+th { background-color: #DAF7A6; }
+td { background-color: #fff7A6; }
 
 /* Body reset */
 body {
@@ -78,7 +72,6 @@ li {
     margin: 10px 0;
     padding: 10px 20px;
     font-size: 1.0em;
-    list-style-type: disc;
     transition: background-color 0.3s ease;
     position: relative;
     border-bottom: 1px solid #ccc;
@@ -95,9 +88,10 @@ li i {
     color: green;
 }
 
+/* Unordered list */
 ul {
     list-style-type: square;
-    list-style-image: url('bullet.png');
+    padding-left: 20px;
 }
 
 ul ul {
@@ -105,20 +99,47 @@ ul ul {
     list-style-type: circle;
 }
 
-/* Ordered list with custom numbering */
+/* Ordered list */
 ol {
     counter-reset: item;
+    list-style-type: none;
+    padding-left: 20px;
 }
 
-li:before {
+ol li {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+}
+
+ol li:before {
     content: counter(item) ".";
     counter-increment: item;
     position: absolute;
-    left: -20px;
+    left: 0;
     font-weight: bold;
 }
 
-/* Animation for list items */
+/* Reversed ordered list */
+ol[reversed] {
+    /* Use default HTML reversed behavior */
+    counter-reset: none;
+}
+
+ol[reversed] li:before {
+    content: ""; /* Let the browser handle reversed numbers */
+}
+
+/* Ordered list with alphabetic style */
+ol[type="a"] li {
+    list-style-type: lower-alpha;
+}
+
+ol[type="a"][reversed] li:before {
+    content: ""; /* Let HTML handle reversed alphabetic */
+}
+
+/* Fade-in animation */
 li {
     opacity: 0;
     animation: fadeIn 0.5s forwards;
@@ -134,46 +155,3 @@ li {
         transform: translateY(0);
     }
 }
-
-/* Highlighted text */
-.highlight {
-    background-color: yellow;
-}
-
-/* Ordered list with custom numbering */
-ol {
-    counter-reset: item;
-    list-style-type: none; /* Remove default numbers */
-    padding-left: 20px;
-}
-
-ol li {
-    display: block;
-    position: relative;
-    padding-left: 30px; /* Space for custom number */
-}
-
-ol li:before {
-    content: counter(item) ".";
-    counter-increment: item;
-    position: absolute;
-    left: 0; /* Aligns the number */
-    font-weight: bold;
-}
-
-/* Unordered list */
-ul {
-    list-style-type: square;
-    padding-left: 20px; /* Ensure proper indentation */
-}
-
-ul ul {
-    margin-left: 20px;
-    list-style-type: circle; /* Nested list style */
-}
-
-li {
-    padding: 10px 0; /* General spacing for all list items */
-    border-bottom: 1px solid #ccc;
-}
-
