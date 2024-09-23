@@ -3,6 +3,9 @@ h1{
     color:rgba(179, 218, 205, 0.815);
     font-size: 1.6rem;
     background-color: rgba(1, 31, 18, 0.815);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 15px 0 12px 5px
 }
 
 h2 {
@@ -20,12 +23,18 @@ h3 {
     color:rgba(179, 218, 205, 0.815);
     font-size: 1.2rem;
     background-color: rgb(2, 58, 35);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 15px 0 12px 5px
 }
 
 h4{
     color:rgba(179, 218, 205, 0.815);
     font-size: 1.0rem;
     background-color: rgb(2, 58, 35);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 15px 0 12px 5px
 }
 
 html {
