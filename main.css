@@ -1,27 +1,29 @@
 h1{
 
-    color:rgb(167, 245, 219);
+    color:rgba(179, 218, 205, 0.815);
     font-size: 1.6rem;
-    background-color: rgb(2, 58, 35);
+    background-color: rgba(1, 31, 18, 0.815);
 }
 
 h2 {
         
-    color:rgb(167, 245, 219);
+    color:rgba(179, 218, 205, 0.815);
     font-size: 1.4rem;
     background-color: rgb(2, 58, 35);
-
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 15px 0 12px 5px
 }
 
 h3 {
 
-    color:rgb(167, 245, 219);
+    color:rgba(179, 218, 205, 0.815);
     font-size: 1.2rem;
     background-color: rgb(2, 58, 35);
 }
 
 h4{
-    color:rgb(167, 245, 219);
+    color:rgba(179, 218, 205, 0.815);
     font-size: 1.0rem;
     background-color: rgb(2, 58, 35);
 }
@@ -65,3 +67,8 @@ td, th {padding: 6px;
 th {background-color: #DAF7A6;}
 
 td {background-color: #fff7A6;}
+
+body {
+    margin: 0;
+    line-height: inherit
+}
