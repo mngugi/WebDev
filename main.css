@@ -101,42 +101,51 @@ ul ul {
 
 /* Ordered list */
 ol {
-    counter-reset: item;
-    list-style-type: none;
+    counter-reset: item; /* Reset counter for ordered lists */
+    list-style-type: none; /* Remove default numbering */
     padding-left: 20px;
 }
 
 ol li {
-    display: block;
-    position: relative;
-    padding-left: 30px;
-}
-
-ol li:before {
-    content: counter(item) ".";
-    counter-increment: item;
-    position: absolute;
-    left: 0;
-    font-weight: bold;
+    position: relative; /* For absolute positioning of numbers */
+    padding-left: 30px; /* Space for custom number */
 }
 
 /* Reversed ordered list */
 ol[reversed] {
-    /* Use default HTML reversed behavior */
-    counter-reset: none;
+    counter-reset: item 7; /* Start at 6 for reversed list (5 will display first) */
+}
+
+ol[reversed] li {
+    counter-increment: item -1; /* Decrement for reversed order */
 }
 
 ol[reversed] li:before {
-    content: ""; /* Let the browser handle reversed numbers */
+    content: counter(item) ". "; /* Show the current counter */
+    position: absolute;
+    left: 0; /* Aligns the number */
+    font-weight: bold;
 }
 
-/* Ordered list with alphabetic style */
-ol[type="a"] li {
-    list-style-type: lower-alpha;
+/* Alphabetic ordered list */
+ol[type="a"] {
+    counter-reset: alpha; /* Initialize counter for alphabetic */
+    list-style-type: none; /* Remove default numbering */
+}
+
+ol[type="a"][reversed] {
+    counter-reset: alpha 7; /* Start at 6 for reversed alphabetic list (f) */
+}
+
+ol[type="a"][reversed] li {
+    counter-increment: alpha -1; /* Decrement for reversed alphabetical order */
 }
 
 ol[type="a"][reversed] li:before {
-    content: ""; /* Let HTML handle reversed alphabetic */
+    content: counter(alpha, lower-alpha) ". "; /* Show the current counter */
+    position: absolute;
+    left: 0; /* Aligns the letter */
+    font-weight: bold;
 }
 
 /* Fade-in animation */
