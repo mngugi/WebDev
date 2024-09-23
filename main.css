@@ -97,3 +97,34 @@ ul {
 ul {
     list-style-image: url('bullet.png'); /* Replace with your image */
 }
+
+li {
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+{
+
+<ul>
+    <li><i class="fa fa-check"></i> Item One</li>
+    <li><i class="fa fa-check"></i> Item Two</li>
+    <li><i class="fa fa-check"></i> Item Three</li>
+</ul>
+
+}
+
+li {
+    padding-left: 30px;
+    position: relative;
+}
+
+li i {
+    position: absolute;
+    left: 0;
+    color: green;
+}
