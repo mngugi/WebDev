@@ -89,3 +89,11 @@ li {
     line-height: 1.0;
     list-style-type: disc; /* Default bullet */
 }
+
+ul {
+    list-style-type: square; /* Options: disc, circle, square, decimal, etc. */
+}
+
+ul {
+    list-style-image: url('bullet.png'); /* Replace with your image */
+}
