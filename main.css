@@ -39,7 +39,7 @@ h4{
 
 html {
 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
     font-size: 2.5ex;
 }
@@ -61,7 +61,7 @@ a:link {
 }
 
 div {
-    background-color:  #DAF7A6 ;
+    background-color:  #e3f5d5 ;
   }
 
 table  {border-collapse: collapse;
@@ -80,4 +80,12 @@ td {background-color: #fff7A6;}
 body {
     margin: 0;
     line-height: inherit
+}
+
+li {
+    margin: 10px 0;
+    padding-left: 20px;
+    font-size: 1.0em;
+    line-height: 1.0;
+    list-style-type: disc; /* Default bullet */
 }
