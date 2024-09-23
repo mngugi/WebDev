@@ -1,126 +1,92 @@
-h1{
-
-    color:rgba(179, 218, 205, 0.815);
-    font-size: 1.6rem;
-    background-color: rgba(1, 31, 18, 0.815);
+/* Headings */
+h1, h2, h3, h4 {
+    color: rgba(179, 218, 205, 0.815);
     font-weight: 700;
     line-height: 1.2;
-    margin: 15px 0 12px 5px
+    margin: 15px 0 12px 5px;
+}
+
+h1 {
+    font-size: 1.6rem;
+    background-color: rgba(1, 31, 18, 0.815);
+}
+
+h2, h3, h4 {
+    background-color: rgb(2, 58, 35);
 }
 
 h2 {
-        
-    color:rgba(179, 218, 205, 0.815);
     font-size: 1.4rem;
-    background-color: rgb(2, 58, 35);
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 15px 0 12px 5px
 }
 
 h3 {
-
-    color:rgba(179, 218, 205, 0.815);
     font-size: 1.2rem;
-    background-color: rgb(2, 58, 35);
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 15px 0 12px 5px
 }
 
-h4{
-    color:rgba(179, 218, 205, 0.815);
+h4 {
     font-size: 1.0rem;
-    background-color: rgb(2, 58, 35);
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 15px 0 12px 5px
 }
 
+/* Global font settings */
 html {
-
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 2.5ex;
 }
 
 p {
     color: rgb(5, 5, 43);
     font-size: 18px;
-  }
-  .highlight {
-    background-color: yellow;
-  }
+}
 
-a:visited {
+a:link, a:visited {
     color: green;
 }
 
-a:link {
-    color: green;
-}
-
+/* Div background */
 div {
-    background-color:  #e3f5d5 ;
-  }
-
-table  {border-collapse: collapse;
-        width: 90%;
-        margin: 20px;
+    background-color: #e3f5d5;
 }
-td, th {padding: 6px;
-        text-align: left;
 
-} 
+/* Table styling */
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px;
+}
 
-th {background-color: #DAF7A6;}
+td, th {
+    padding: 6px;
+    text-align: left;
+}
 
-td {background-color: #fff7A6;}
+th {
+    background-color: #DAF7A6;
+}
 
+td {
+    background-color: #fff7A6;
+}
+
+/* Body reset */
 body {
     margin: 0;
-    line-height: inherit
+    line-height: inherit;
 }
 
+/* List item styling */
 li {
     margin: 10px 0;
-    padding-left: 20px;
+    padding: 10px 20px;
     font-size: 1.0em;
-    line-height: 1.0;
-    list-style-type: disc; /* Default bullet */
-}
-
-ul {
-    list-style-type: square; /* Options: disc, circle, square, decimal, etc. */
-}
-
-ul {
-    list-style-image: url('bullet.png'); /* Replace with your image */
-}
-
-li {
-    padding: 10px;
+    list-style-type: disc;
     transition: background-color 0.3s ease;
+    position: relative;
+    border-bottom: 1px solid #ccc;
 }
 
 li:hover {
     background-color: #f0f0f0;
     cursor: pointer;
-}
-
-{
-
-<ul>
-    <li><i class="fa fa-check"></i> Item One</li>
-    <li><i class="fa fa-check"></i> Item Two</li>
-    <li><i class="fa fa-check"></i> Item Three</li>
-</ul>
-
-}
-
-li {
-    padding-left: 30px;
-    position: relative;
 }
 
 li i {
@@ -129,18 +95,19 @@ li i {
     color: green;
 }
 
-li {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+ul {
+    list-style-type: square;
+    list-style-image: url('bullet.png');
 }
 
+ul ul {
+    margin-left: 20px;
+    list-style-type: circle;
+}
+
+/* Ordered list with custom numbering */
 ol {
     counter-reset: item;
-}
-
-li {
-    display: block;
-    position: relative;
 }
 
 li:before {
@@ -151,11 +118,7 @@ li:before {
     font-weight: bold;
 }
 
-ul ul {
-    margin-left: 20px;
-    list-style-type: circle; /* Different style for nested lists */
-}
-
+/* Animation for list items */
 li {
     opacity: 0;
     animation: fadeIn 0.5s forwards;
@@ -171,3 +134,46 @@ li {
         transform: translateY(0);
     }
 }
+
+/* Highlighted text */
+.highlight {
+    background-color: yellow;
+}
+
+/* Ordered list with custom numbering */
+ol {
+    counter-reset: item;
+    list-style-type: none; /* Remove default numbers */
+    padding-left: 20px;
+}
+
+ol li {
+    display: block;
+    position: relative;
+    padding-left: 30px; /* Space for custom number */
+}
+
+ol li:before {
+    content: counter(item) ".";
+    counter-increment: item;
+    position: absolute;
+    left: 0; /* Aligns the number */
+    font-weight: bold;
+}
+
+/* Unordered list */
+ul {
+    list-style-type: square;
+    padding-left: 20px; /* Ensure proper indentation */
+}
+
+ul ul {
+    margin-left: 20px;
+    list-style-type: circle; /* Nested list style */
+}
+
+li {
+    padding: 10px 0; /* General spacing for all list items */
+    border-bottom: 1px solid #ccc;
+}
+
