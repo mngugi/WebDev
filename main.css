@@ -128,3 +128,46 @@ li i {
     left: 0;
     color: green;
 }
+
+li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+ol {
+    counter-reset: item;
+}
+
+li {
+    display: block;
+    position: relative;
+}
+
+li:before {
+    content: counter(item) ".";
+    counter-increment: item;
+    position: absolute;
+    left: -20px;
+    font-weight: bold;
+}
+
+ul ul {
+    margin-left: 20px;
+    list-style-type: circle; /* Different style for nested lists */
+}
+
+li {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
