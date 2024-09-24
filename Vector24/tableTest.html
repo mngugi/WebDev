@@ -1,75 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        .inset { border:inset 5px red; }
-        .outset { border:outset 5px red;}
-        .ridge { border:ridge 5px red; }
-        .groove { border:groove 5px red;}
-        .dashed { border:dashed 5px red;}
-        .dotted { border:dotted 5px red;}
-        .solid { border:solid 5px red;}
-        .double {border:double 5px red;}
-        
-        .inset td, .outset td, .ridge td, .groove td, .dashed td, 
-        .dotted td, .solid td, .double td {border:inset 1px #000;}
-        table {
-            border-collapse: collapse;
-            width: 350px;
-            margin: 20px;
-            empty-cells: show;
-            
-
-     }
-
-  td, th {
-            padding: 6px;
-            text-align: left;
-            border-style: bold ;
-            border: width 1px;
-            border-color: #999999;
-    } 
-
-    </style>
-   
-
-</head>
-
-<h2> Tables Example 2 EmptyCells-Show and Excercise 2 </h2>
-
-<table style="empty-cells: show;">
-    <tr>
-        <th> Header1  </th>
-        <th> Header2 </th>
-        <th> Header3</th>
-        
+<style type="text/css">
+    table          {border:ridge 5px red;}
+    table td       {border:inset 1px #000;}
+    table tr#ROW1  {background-color:red; color:white;}
+    table tr#ROW2  {background-color:white;}
+    table tr#ROW3  {background-color:blue; color:white;}
+    table td#CELL9 {border:inset 4px red; background-color:navy;}
+  </style>
+  
+  <table>
+    <tr id="ROW1">
+      <td>Cell 1.1</td>
+      <td>Cell 1.2</td>
+      <td>Cell 1.3</td>
     </tr>
-    <tr>
-        <td> Data1  </td>
-        <td> Data2 </td>
-        
-        
+    <tr id="ROW2">
+      <td>Cell 2.1</td>
+      <td>Cell 2.2</td>
+      <td>Cell 2.3</td>
     </tr>
-
-</table>
-
-<h2>Tables Example 3 EmptyCells-Hide and Excercise 3 </h2>
-
-<table style="empty-cells: hide;" >
-    <tr></tr>
-        <th> Header1  </th>
-        <th> Header2 </th>
-        <th> Header3 </th>
-        <th> </th>
+    <tr id="ROW3">
+      <td>Cell 3.1</td>
+      <td>Cell 3.2</td
+      <td id="CELL9">Cell 3.3</td>
     </tr>
-
-    <tr></tr>
-        <td> Data1  </td>
-        <td> Data2 </td>
-        <td>  </td>
-        
-    </tr>
-
-
-</table>
-</html>
+  </table>
