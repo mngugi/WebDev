@@ -56,25 +56,9 @@ table {
     
 }
 
-style {
-    border-collapse: collapse;
-    width: 350px;
-    margin: 20px;
-    empty-cells: show;
-    empty-cells: hide;
+
  
 
-}
-
-style {
-    border-collapse: collapse;
-    width: 350px;
-    margin: 20px;
-    empty-cells: show;
-    
- 
-
-}
 td, th {
     padding: 6px;
     text-align: left;
