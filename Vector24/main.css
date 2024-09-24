@@ -52,11 +52,15 @@ table {
     width: 350px;
     margin: 20px;
     empty-cells: show;
+    
 }
 
 td, th {
     padding: 6px;
     text-align: left;
+    border-style: bold ;
+    border: width 1px;
+    border-color: #999999;
 }
 
 th { background-color: #DAF7A6; }
