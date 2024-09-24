@@ -1,0 +1,175 @@
+/* Headings */
+h1, h2, h3, h4 {
+    color: rgba(179, 218, 205, 0.815);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 15px 0 12px 5px;
+}
+
+h1 {
+    font-size: 1.6rem;
+    background-color: rgba(1, 31, 18, 0.815);
+}
+
+h2 {
+    font-size: 1.4rem;
+    background-color: rgb(2, 58, 35);
+}
+
+h3 {
+    font-size: 1.2rem;
+    background-color: rgb(2, 58, 35);
+}
+
+h4 {
+    font-size: 1.0rem;
+    background-color: rgb(2, 58, 35);
+}
+
+/* Global font settings */
+html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.5ex;
+}
+
+p {
+    color: rgb(5, 5, 43);
+    font-size: 18px;
+}
+
+a:link, a:visited {
+    color: green;
+}
+
+/* Div background */
+div {
+    background-color: #e3f5d5;
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    width: 350px;
+    margin: 20px;
+    empty-cells: show;
+    empty-cells: hide;
+    
+}
+
+
+ 
+
+td, th {
+    padding: 6px;
+    text-align: left;
+    border-style: bold ;
+    border: width 1px;
+    border-color: #999999;
+}
+
+th { background-color: #DAF7A6; }
+td { background-color: #fff7A6; }
+
+/* Body reset */
+body {
+    margin: 0;
+    line-height: inherit;
+}
+
+/* List item styling */
+li {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 1.0em;
+    transition: background-color 0.3s ease;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+
+li:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+li i {
+    position: absolute;
+    left: 0;
+    color: green;
+}
+
+/* Unordered list */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+ul ul {
+    margin-left: 20px;
+    list-style-type: circle;
+}
+
+/* Ordered list */
+ol {
+    counter-reset: item; /* Reset counter for ordered lists */
+    list-style-type: none; /* Remove default numbering */
+    padding-left: 20px;
+}
+
+ol li {
+    position: relative; /* For absolute positioning of numbers */
+    padding-left: 30px; /* Space for custom number */
+}
+
+/* Reversed ordered list */
+ol[reversed] {
+    counter-reset: item 7; /* Start at 6 for reversed list (5 will display first) */
+}
+
+ol[reversed] li {
+    counter-increment: item -1; /* Decrement for reversed order */
+}
+
+ol[reversed] li:before {
+    content: counter(item) ". "; /* Show the current counter */
+    position: absolute;
+    left: 0; /* Aligns the number */
+    font-weight: bold;
+}
+
+/* Alphabetic ordered list */
+ol[type="a"] {
+    counter-reset: alpha; /* Initialize counter for alphabetic */
+    list-style-type: none; /* Remove default numbering */
+}
+
+ol[type="a"][reversed] {
+    counter-reset: alpha 7; /* Start at 6 for reversed alphabetic list (f) */
+}
+
+ol[type="a"][reversed] li {
+    counter-increment: alpha -1; /* Decrement for reversed alphabetical order */
+}
+
+ol[type="a"][reversed] li:before {
+    content: counter(alpha, lower-alpha) ". "; /* Show the current counter */
+    position: absolute;
+    left: 0; /* Aligns the letter */
+    font-weight: bold;
+}
+
+/* Fade-in animation */
+li {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
