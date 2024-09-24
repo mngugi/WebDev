@@ -49,8 +49,9 @@ div {
 /* Table styling */
 table {
     border-collapse: collapse;
-    width: 90%;
+    width: 350px;
     margin: 20px;
+    empty-cells: show;
 }
 
 td, th {
