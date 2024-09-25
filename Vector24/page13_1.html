@@ -25,6 +25,7 @@
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
+                <th>Comments </th>
             </tr>
         </table>
 
@@ -37,12 +38,16 @@
 
             const firstname = document.getElementById("firstname").value;
             const lastname = document.getElementById("lastname").value;
+            const comments = document.getElementById("comments").value;
 
             const table = document.getElementById("customerTable");
             const newRow = table.insertRow();
 
+
+
             newRow.insertCell(0).innerText = firstname;
             newRow.insertCell(1).innerText = lastname;
+            newRow.insertCell(2).innerText = comments;
 
             document.getElementById("customerForm").reset();
         });
