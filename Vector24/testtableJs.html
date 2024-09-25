@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form to Table</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Form</h2>
+<form id="studentForm">
+    <label for="admNo">ADM NUMBER:</label>
+    <input type="text" id="admNo" name="admNo" required><br><br>
+    
+    <label for="name">STUDENT NAME:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="mark1">Mark1:</label>
+    <input type="number" id="mark1" name="mark1" required><br><br>
+    
+    <label for="mark2">Mark2:</label>
+    <input type="number" id="mark2" name="mark2" required><br><br>
+    
+    <button type="submit">Add to Table</button>
+</form>
+
+<h2>Student Records</h2>
+<table id="studentTable">
+    <tr>
+        <th>ADM NUMBER</th>
+        <th>STUDENT NAME</th>
+        <th>Mark1</th>
+        <th>Mark2</th>
+        <th>Total</th>
+    </tr>
+</table>
+
+<script>
+    // Listen for form submission
+    document.getElementById("studentForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent page reload
+
+        // Get form values
+        const admNo = document.getElementById("admNo").value;
+        const name = document.getElementById("name").value;
+        const mark1 = parseInt(document.getElementById("mark1").value);
+        const mark2 = parseInt(document.getElementById("mark2").value);
+        const total = mark1 + mark2;
+
+        // Insert the data into the table
+        const table = document.getElementById("studentTable");
+        const newRow = table.insertRow(); // Insert a new row
+        
+        newRow.insertCell(0).innerText = admNo;
+        newRow.insertCell(1).innerText = name;
+        newRow.insertCell(2).innerText = mark1;
+        newRow.insertCell(3).innerText = mark2;
+        newRow.insertCell(4).innerText = total;
+
+        // Optionally, clear the form after submission
+        document.getElementById("studentForm").reset();
+    });
+</script>
+
+</body>
+</html>
