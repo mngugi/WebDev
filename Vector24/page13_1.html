@@ -43,6 +43,14 @@ document.getElementById("customerForm").addEventListener("submit",function(event
     const firstname = document.getElementById("firstname").value;
     const lastname = document.getElementById("lastname").value;
 
+    const table = document.getElementById("customerTable");
+    const newRow = table.insertRow();
+
+    newRow.insertCell(0).innerText = firstname;
+    newRow.insertCell(1).innerText = lastname;
+
+    document.getElementById("customerForm").reset();
+
 }
 
 </script>
