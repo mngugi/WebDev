@@ -13,7 +13,7 @@
     <h2>Simple HTML Forms Example</h2>
     
 
- <form action="submit" method="get">
+ <form id="customerform" action="submit" method="get">
     <label for="firstname">First Name:</label>
     <input type="text" id="firstname" name="First Name" required >
     <br><br>
@@ -37,7 +37,7 @@
     </table>
 
 <script>
-document.getElementById("customerTable").addEventListener("submit",function(event) {
+document.getElementById("customerForm").addEventListener("submit",function(event) {
     event.preventDefault();
 
     const firstname = document.getElementById("firstname").value;
