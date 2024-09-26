@@ -71,9 +71,14 @@ td, th {
     border-style: bold ;
     border: width 1px;
     border-color: #999999;
+
 }
 
-th { background-color: #DAF7A6; }
+th { background-color: #619402; 
+
+    
+
+}
 td { background-color: #fff7A6; }
 
 /* Body reset */
