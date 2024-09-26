@@ -79,7 +79,17 @@ th { background-color: #619402;
     
 
 }
-td { background-color: #01420f; }
+td { background-color: #01420f; 
+     
+
+}
+
+.gtext{
+    color: black;
+    text-decoration-color: black;
+
+
+}
 
 /* Body reset */
 body {
