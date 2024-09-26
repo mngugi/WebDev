@@ -7,7 +7,7 @@ body {
 
 /* Headings */
 h1, h2, h3, h4 {
-    color: rgba(179, 218, 205, 0.815);
+    color: rgb(8, 238, 161);
     font-weight: 700;
     line-height: 1.2;
     margin: 15px 0 12px 5px;
@@ -15,12 +15,12 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 1.6rem;
-    background-color: rgba(1, 31, 18, 0.815);
+    background-color: rgba(4, 51, 31, 0.815);
 }
 
 h2 {
     font-size: 1.4rem;
-    background-color: rgb(2, 58, 35);
+    background-color: rgba(10, 41, 20, 0.788);
 }
 
 h3 {
