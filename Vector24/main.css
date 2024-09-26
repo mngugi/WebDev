@@ -1,13 +1,13 @@
 body {
 
     text-align: left;
-    color: #04B486;
+    color: #00110d;
     background-color: #EFFBF8;
 }
 
 /* Headings */
 h1, h2, h3, h4 {
-    color: #088A85;
+    color: #f7aa06;
     font-weight: 700;
     line-height: 1.2;
     margin: 15px 0 12px 5px;
@@ -193,13 +193,3 @@ li {
     animation: fadeIn 0.5s forwards;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
