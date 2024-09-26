@@ -2,7 +2,7 @@ body {
 
     text-align: center;
     color: white;
-    background-color: rgb(241, 247, 241);
+    background-color: rgb(102, 131, 125);
 }
 
 /* Headings */
@@ -50,7 +50,7 @@ a:link, a:visited {
 
 /* Div background */
 div {
-    background-color: #e3f5d5;
+    background-color: #aaf178;
 }
 
 /* Table styling */
