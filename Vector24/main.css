@@ -2,12 +2,12 @@ body {
 
     text-align: left;
     color: #04B486;
-    background-color: rgb(102, 131, 125);
+    background-color: #EFFBF8;
 }
 
 /* Headings */
 h1, h2, h3, h4 {
-    color: #01DFD7;
+    color: #088A85;
     font-weight: 700;
     line-height: 1.2;
     margin: 15px 0 12px 5px;
@@ -15,24 +15,33 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 1.6rem;
-    background-color: #1a1a1d;
+    background-color: #088A85;
 }
 
 h2 {
     font-size: 1.4rem;
-    background-color: rgba(10, 41, 20, 0.788);
+    background-color: #088A85;
 }
 
 h3 {
     font-size: 1.2rem;
-    background-color: rgb(2, 58, 35);
+    background-color: #088A85;
 }
 
 h4 {
     font-size: 1.0rem;
-    background-color: rgb(2, 58, 35);
+    background-color: #088A85;
 }
 
+h5{
+    font-size: 1.0rem;
+    background-color: #088A85;
+}
+
+h6 {
+    font-size: 1.0rem;
+    background-color: #088A85;
+}
 /* Global font settings */
 html {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
