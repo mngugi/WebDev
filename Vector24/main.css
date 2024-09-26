@@ -1,3 +1,10 @@
+body {
+
+    text-align: center;
+    color: white;
+    background-color: rgb(241, 247, 241);
+}
+
 /* Headings */
 h1, h2, h3, h4 {
     color: rgba(179, 218, 205, 0.815);
