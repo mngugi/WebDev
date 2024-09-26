@@ -59,13 +59,12 @@ table {
     width: 350px;
     margin: 20px;
     empty-cells: show;
-    empty-cells: hide;
+    
     
 }
 
 
  
-
 td, th {
     padding: 6px;
     text-align: left;
