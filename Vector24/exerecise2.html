@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        fieldset {
+            border: 2px solid #ccc;
+            padding: 10px;
+            width: 200px;
+            position: Right;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
     <form>
@@ -20,14 +36,14 @@
         <br><br>
 
 
-        Gender:
-
-        Male <input type="radio" id="male" >
-        <br><br>
-
-        
-        Female <input type="radio" id="female" >
-        <br><br>
+        <fieldset>
+            <legend>Gender</legend>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender">
+            <br><br>
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender">
+        </fieldset>
 
         <p> How did you hear about us? </p>
 
