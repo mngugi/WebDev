@@ -131,12 +131,13 @@ li i {
 ul {
     list-style-type: square;
     padding-left: 20px;
+    color: #01420f;
 }
 
 ul ul {
     margin-left: 20px;
     list-style-type: circle;
-}
+    color: #01420f;
 
 /* Ordered list */
 ol {
