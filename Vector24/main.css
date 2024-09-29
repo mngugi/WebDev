@@ -20,6 +20,11 @@ h2 { font-size: 1.4rem; }
 h3 { font-size: 1.2rem; }
 h4, h5, h6 { font-size: 1.0rem; }
 
+.colored-heading {
+    color: rgba(225, 236, 225, 0.781); /* The same color as before */
+}
+
+
 /* Global font settings */
 html {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
