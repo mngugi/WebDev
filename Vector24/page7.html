@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <!-- this is page7.html code -->
-<!--index.html is the main page -->
-<!-- Author: Peter Mwangi-->
+<!-- index.html is the main page -->
+<!-- Author: Peter Mwangi -->
 
 <html lang="en">
-    <head><link rel="stylesheet" type="text/css" href="main.css">
-        <title> HTML Unordered Lists </title>
-    </head>
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>HTML Unordered Lists</title>
+</head>
 <body>
 
+    <h2>Exercise 2.4: Example of HTML List Attributes</h2>
+    <h2 class="colored-heading">HTML Lists</h2> <!-- Class for styling -->
 
-    <h2> Excercise 2.4: Example of Html Lists Attributes </h2>
-    <h2 class="colored-heading">HTML Lists</h2>
-
-    <form action="">
-
-        <label> Lists of Cars made in Europe </label>
+    <form action=""> <!-- The action can be empty if not submitting -->
+        <label for="car-list">List of Cars Made in Europe:</label>
         <input type="text" id="car-list" list="Car">
         <datalist id="Car">
-
             <option value="BMW"></option>
             <option value="Bentley"></option>
             <option value="Mercedes"></option>
             <option value="Audi"></option>
             <option value="Volkswagen"></option>
-
         </datalist>
+        <input type="text" type="submit" value="Submit"> <!-- Added a submit button -->
     </form>
-
-
 
 </body>
 </html>
