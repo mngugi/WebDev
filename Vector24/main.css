@@ -37,7 +37,7 @@ a:link, a:visited {
 
 /* Div background */
 div {
-    background-color: #a0f3c0;
+    background-color: #011325;
 }
 
 /* Table styling */
@@ -75,7 +75,7 @@ li {
 }
 
 li:hover {
-    background-color: #d9f3bc;
+    background-color: #eafab0;
     cursor: pointer;
 }
 
@@ -100,52 +100,34 @@ ul ul {
 
 /* Ordered list */
 ol {
-    counter-reset: item;
-    list-style-type: none;
+    list-style-type: decimal; /* Standard decimal numbering */
     padding-left: 20px;
 }
 
 ol li {
     position: relative;
-    padding-left: 30px;
-}
-
-ol li:before {
-    content: counter(item) ". ";
-    position: absolute;
-    left: 0;
-    font-weight: bold;
+    padding-left: 30px; /* Space for custom number */
 }
 
 /* Reversed ordered list */
 ol[reversed] {
-    counter-reset: item 7;
+    list-style-type: decimal; /* Standard numbering for reversed list */
 }
 
 ol[reversed] li {
-    counter-increment: item -1;
-}
-
-ol[reversed] li:before {
-    content: counter(item) ". ";
+    position: relative;
+    padding-left: 30px; /* Space for custom number */
 }
 
 /* Alphabetic ordered list */
 ol[type="a"] {
-    counter-reset: alpha;
-    list-style-type: none;
+    list-style-type: lower-alpha; /* Alphabetical numbering */
+    padding-left: 20px;
 }
 
 ol[type="a"][reversed] {
-    counter-reset: alpha 7;
-}
-
-ol[type="a"][reversed] li {
-    counter-increment: alpha -1;
-}
-
-ol[type="a"][reversed] li:before {
-    content: counter(alpha, lower-alpha) ". ";
+    list-style-type: lower-alpha; /* Reversed alphabetical numbering */
+    padding-left: 20px;
 }
 
 /* Fade-in animation */
