@@ -138,6 +138,7 @@ ul ul {
     margin-left: 20px;
     list-style-type: circle;
     color: #01420f;
+}
 
 /* Ordered list */
 ol {
@@ -195,8 +196,7 @@ li {
 }
 
 .custom-hr {
-    border: none;
-    height: 5px;
-    background-color: gray;
-  }
-  
+  border: none;
+  height: 5px;
+  background-color: gray;
+}
