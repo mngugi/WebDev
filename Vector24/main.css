@@ -194,3 +194,9 @@ li {
     animation: fadeIn 0.5s forwards;
 }
 
+.custom-hr {
+    border: none;
+    height: 5px;
+    background-color: gray;
+  }
+  
