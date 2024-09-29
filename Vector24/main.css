@@ -1,47 +1,25 @@
 body {
-
     text-align: left;
     color: #00110d;
     background-color: #EFFBF8;
+    margin: 0;
+    line-height: inherit;
 }
 
 /* Headings */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
     color: #f7aa06;
     font-weight: 700;
     line-height: 1.2;
     margin: 15px 0 12px 5px;
-}
-
-h1 {
-    font-size: 1.6rem;
     background-color: #088A85;
 }
 
-h2 {
-    font-size: 1.4rem;
-    background-color: #088A85;
-}
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.2rem; }
+h4, h5, h6 { font-size: 1.0rem; }
 
-h3 {
-    font-size: 1.2rem;
-    background-color: #088A85;
-}
-
-h4 {
-    font-size: 1.0rem;
-    background-color: #088A85;
-}
-
-h5{
-    font-size: 1.0rem;
-    background-color: #088A85;
-}
-
-h6 {
-    font-size: 1.0rem;
-    background-color: #088A85;
-}
 /* Global font settings */
 html {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -59,7 +37,7 @@ a:link, a:visited {
 
 /* Div background */
 div {
-    background-color: #F8F9FA;
+    background-color: #a0f3c0;
 }
 
 /* Table styling */
@@ -68,42 +46,20 @@ table {
     width: 350px;
     margin: 20px;
     empty-cells: show;
-    
-    
 }
 
-
- 
 td, th {
     padding: 6px;
     text-align: left;
-    border-style: bold ;
-    border: width 1px;
-    border-color: #999999;
-
+    border: 1px solid #999999;
 }
 
-th { background-color: #3e5e0350; 
+th { background-color: #3e5e0350; }
+td { background-color: #01420f; }
 
-    
-
-}
-td { background-color: #01420f; 
-     
-
-}
-
-.gtext{
+.gtext {
     color: black;
     text-decoration-color: black;
-
-
-}
-
-/* Body reset */
-body {
-    margin: 0;
-    line-height: inherit;
 }
 
 /* List item styling */
@@ -114,10 +70,12 @@ li {
     transition: background-color 0.3s ease;
     position: relative;
     border-bottom: 1px solid #ccc;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
 }
 
 li:hover {
-    background-color: #f0f0f0;
+    background-color: #d9f3bc;
     cursor: pointer;
 }
 
@@ -142,84 +100,91 @@ ul ul {
 
 /* Ordered list */
 ol {
-    counter-reset: item; /* Reset counter for ordered lists */
-    list-style-type: none; /* Remove default numbering */
+    counter-reset: item;
+    list-style-type: none;
     padding-left: 20px;
 }
 
 ol li {
-    position: relative; /* For absolute positioning of numbers */
-    padding-left: 30px; /* Space for custom number */
+    position: relative;
+    padding-left: 30px;
+}
+
+ol li:before {
+    content: counter(item) ". ";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
 }
 
 /* Reversed ordered list */
 ol[reversed] {
-    counter-reset: item 7; /* Start at 6 for reversed list (5 will display first) */
+    counter-reset: item 7;
 }
 
 ol[reversed] li {
-    counter-increment: item -1; /* Decrement for reversed order */
+    counter-increment: item -1;
 }
 
 ol[reversed] li:before {
-    content: counter(item) ". "; /* Show the current counter */
-    position: absolute;
-    left: 0; /* Aligns the number */
-    font-weight: bold;
+    content: counter(item) ". ";
 }
 
 /* Alphabetic ordered list */
 ol[type="a"] {
-    counter-reset: alpha; /* Initialize counter for alphabetic */
-    list-style-type: none; /* Remove default numbering */
+    counter-reset: alpha;
+    list-style-type: none;
 }
 
 ol[type="a"][reversed] {
-    counter-reset: alpha 7; /* Start at 6 for reversed alphabetic list (f) */
+    counter-reset: alpha 7;
 }
 
 ol[type="a"][reversed] li {
-    counter-increment: alpha -1; /* Decrement for reversed alphabetical order */
+    counter-increment: alpha -1;
 }
 
 ol[type="a"][reversed] li:before {
-    content: counter(alpha, lower-alpha) ". "; /* Show the current counter */
-    position: absolute;
-    left: 0; /* Aligns the letter */
-    font-weight: bold;
+    content: counter(alpha, lower-alpha) ". ";
 }
 
 /* Fade-in animation */
-li {
-    opacity: 0;
-    animation: fadeIn 0.5s forwards;
+@keyframes fadeIn {
+    to { opacity: 1; }
 }
 
+/* Colored list items */
+.colored-list li:nth-child(1) { color: red; }
+.colored-list li:nth-child(2) { color: blue; }
+.colored-list li:nth-child(3) { color: green; }
+.colored-list li:nth-child(4) { color: orange; }
+
+/* Custom horizontal rule */
 .custom-hr {
-  border: none;
-  height: 5px;
-  background-color: gray;
+    border: none;
+    height: 5px;
+    background-color: gray;
 }
 
+/* Marquee styling */
 .marquee {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
     background-color: lightgreen;
-  }
-  
-  .marquee span {
+}
+
+.marquee span {
     display: inline-block;
     padding-left: 100%;
     animation: slide 10s linear infinite;
-  }
-  
-  @keyframes slide {
+}
+
+@keyframes slide {
     0% {
-      transform: translateX(100%);
+        transform: translateX(100%);
     }
     100% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
-  }
-  
+}
