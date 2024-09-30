@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <!-- this is page13_1.html code -->
 <!--index.html is the main page -->
 <!-- Author: Peter Mwangi-->
-<!DOCTYPE html>
-<html>
-    <head> 
-        <link rel="stylesheet" type="text/css" href="main.css">   
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="main.css">
         <title>Simple Html Forms</title>
     </head>
 <body>
@@ -21,18 +22,22 @@
 
         <textarea id="comments" name="comment" rows="4" cols="50"> Add feed here ..  </textarea>
 
-        
+
         <h2>Customer Records and Feedback</h2>
-        
+
         <table id="customerTable">
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Comments </th>
+            <tbody>
+              <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Comments</th>
             </tr>
+
+        </tbody>
+
         </table>
 
-        <input type="submit" value="Submit">
+        <button type="submit">value="Submit"</button>
     </form>
 
     <script>
