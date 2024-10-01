@@ -11,6 +11,20 @@
             max-width: 600px; /* Optionally, set a maximum width */
             padding: 20px; /* Add padding for internal spacing */
             margin: 0 auto; /* Center the fieldset horizontally */
+            background-color: aliceblue;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        /* Change background and border color on hover */
+        input[type="text"]:hover {
+            background-color: #f0f8ff; /* Light blue background */
+            border-color: #007bff; /* Blue border */
         }
 
         
@@ -54,11 +68,6 @@
 
             Enter your Date of Birth <input type="date" id="birthdate" name="birthdate" required>
             <br><br>
-
-
-                <input type="text" placeholder="Enter your address" name="address">
-
-
 
 
             <button type="submit">submit</button>
