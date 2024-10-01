@@ -20,6 +20,16 @@
         background-color: lightgray;
         color: blue;
     }
+
+    .signed-by {
+        background-color: rgb(185, 4, 161);
+        color: hsl(0, 20%, 94%);
+
+    }
+    .last-cell{
+        background-color: #FFFF00;
+    }
+    
     </style>
 </head>
 <body>
@@ -66,8 +76,9 @@
     </tbody>
     <tfoot>
         <tr>
-            <th colspan="4" style="background-color: purple;">Signed by Class Rep:</th>
-            <th bgcolor="yellow">22/6/2009</th>
+            <th scope="row" colspan="4" class="signed-by">Signed by Class Rep:</th>
+            <th scope="col" class="last-cell">22/6/2009</th>
+
         </tr>
     </tfoot>
 </table>
