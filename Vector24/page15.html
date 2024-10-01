@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- this is page15.html code -->
-<!--index.html is the main page -->
-<!-- Author: Peter Mwangi-->
+<!-- index.html is the main page -->
+<!-- Author: Peter Mwangi -->
 
 <html lang="en">
 
@@ -9,64 +9,58 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     <title>Tables Empty-cell</title>
     <style>
-         table {
-                border-collapse: collapse;
-                width: 350px;
-                margin: 20px;
-                empty-cells: show;
-                
+        table {
+            border-collapse: collapse;
+            width: 350px;
+            margin: 20px;
+            empty-cells: show;
+        }
 
-         }
-
-      td, th {
-                padding: 6px;
-                text-align: left;
-                border-style: bold ;
-                border: width 1px;
-                border-color: #999999;
-        }     
-
-         
+        td, th {
+            padding: 6px;
+            text-align: left;
+            border: 1px solid #999999;
+        }
     </style>
-
 </head>
 
-<h2> Tables Example 2 EmptyCells-Show and Excercise 2 </h2>
+<body>
+
+<h2>Tables Example 2 EmptyCells-Show and Exercise 2</h2>
 
 <table style="empty-cells: show;" border="1">
     <tbody>
-    <tr scope="cols">
-        <th scope="col"> Header1</th>
-        <th scope="col"> Header2</th>
-        <th scope="col"> Header3</th>
-
+    <tr>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
     </tr>
     <tr>
-        <td> Data1  </td>
-        <td> Data2 </td>
-
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td></td> <!-- Explicit empty cell to demonstrate empty-cells: show -->
     </tr>
-</tbody>
+    </tbody>
 </table>
 
-<h2>Tables Example 3 EmptyCells-Hide and Excercise 3 </h2>
+<h2>Tables Example 3 EmptyCells-Hide and Exercise 3</h2>
 
 <table style="empty-cells: hide;" border="1">
     <tbody>
     <tr>
-        <th scope="col"> Header1 </th>
-        <th scope="col"> Header2 </th>
-        <th scope="col"> Header3 </th>
-        <th scope="col"> </th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+        <th scope="col"></th> <!-- Empty header cell -->
     </tr>
-
     <tr>
-        <td> Data1  </td>
-        <td> Data2 </td>
-        <td>  </td>
-
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td></td> <!-- Explicit empty cell to demonstrate empty-cells: hide -->
+        <td></td>
     </tr>
     </tbody>
-
 </table>
+
+</body>
 </html>
