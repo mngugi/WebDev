@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User personal information</title>
+    <style>
+        fieldset {
+            width: 50%; /* Adjust the width as per your requirement */
+            max-width: 600px; /* Optionally, set a maximum width */
+            padding: 20px; /* Add padding for internal spacing */
+            margin: 0 auto; /* Center the fieldset horizontally */
+        }
+        </style>
 </head>
 <body>
     <form>
@@ -31,6 +39,12 @@
             <br>
             <input type="password" id="confirm-password" placeholder="password" required>
             <br><br>
+
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender">
+
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender">
 
 
             <button type="submit">submit</button>
