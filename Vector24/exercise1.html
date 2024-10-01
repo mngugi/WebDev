@@ -1,57 +1,70 @@
 <!DOCTYPE html>
-<!-- this is  html learning modules for web development -->
-<!--index.html is the main page -->
-<!-- Author: Peter Mwangi-->
+<!-- This is an HTML learning module for web development -->
+<!-- index.html is the main page -->
+<!-- Author: Peter Mwangi -->
 
 <html lang="en">
 <head>
+    <title>Exercise 1</title>
     <style>
-</style>
-
+        table {
+            border-collapse: collapse;
+            width: 45%;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
 
-    <h2> Tables Excercise 1 </h2>
-<table border="4"> 
-    <th colspan="5" style="background-color: lightgray; color:blue" > Exam Records </th>
-    <tr>
-        
-        <td> ADM NUMBER </td>
-        <td> STUDENT NAMES </td>
-        <td> Mark1 </td>
-        <td> Mark2 </td>
-        <td>Total</td>
-    </tr>
+<h2>Tables Exercise 1</h2>
 
-    <tr>
-        <td> p1001 </td>
-        <td> Pius </td>
-        <td> 73 </td>
-        <td> 52 </td>
-        <td> 125 </td>
-    </tr>
-
-   
-    <tr>
-        <td> p1002 </td>
-        <td> Angela </td>
-        <td> 64 </td>
-        <td> 56 </td>
-        <td> 120 </td>
-    </tr>
-
-    
-    <tr>
-        <td> p1003 </td>
-        <td> Bruno </td>
-        <td> 55 </td>
-        <td> 75 </td>
-        <td> 130 </td>
-    </tr>
-
-    <th colspan="4" style="background-color: purple;"> Signed by Class Rep: </th>
-    <th bgcolor="yellow">22/6/2009</th>
+<!-- Start the table structure here -->
+<table border="4">
+    <thead>
+        <tr>
+            <th colspan="5" style="background-color: lightgray; color:blue;">Exam Records</th>
+        </tr>
+        <tr>
+            <th scope="col">ADM NUMBER</th>
+            <th scope="col">STUDENT NAMES</th>
+            <th scope="col">Mark1</th>
+            <th scope="col">Mark2</th>
+            <th scope="col">Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>p1001</td>
+            <td>Pius</td>
+            <td>73</td>
+            <td>52</td>
+            <td>125</td>
+        </tr>
+        <tr>
+            <td>p1002</td>
+            <td>Angela</td>
+            <td>64</td>
+            <td>56</td>
+            <td>120</td>
+        </tr>
+        <tr>
+            <td>p1003</td>
+            <td>Bruno</td>
+            <td>55</td>
+            <td>75</td>
+            <td>130</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="4" style="background-color: purple;">Signed by Class Rep:</th>
+            <th bgcolor="yellow">22/6/2009</th>
+        </tr>
+    </tfoot>
+</table>
 
 </body>
-
 </html>
