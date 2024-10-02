@@ -69,7 +69,7 @@
         }
 
         .radio-group {
-            margin-bottom: 20px;
+            margin-top: 20px; /* Add space above the radio group */
         }
 
         .radio-group label {
@@ -81,17 +81,17 @@
 <body>
     <h2>Application Form</h2>
 
-    <form>
+    <form action="/submit" method="POST">
         <!-- Left Column -->
         <div class="form-column">
             <div class="form-group">
                 <label for="firstname">First Name:</label>
-                <input type="text" id="firstname" name="firstname" required>
+                <input type="text" id="firstname" name="firstname" required placeholder="Enter your first name">
             </div>
 
             <div class="form-group">
                 <label for="lastname">Last Name:</label>
-                <input type="text" id="lastname" name="lastname" required>
+                <input type="text" id="lastname" name="lastname" required placeholder="Enter your last name">
             </div>
 
             <div class="form-group">
@@ -109,8 +109,13 @@
 
             <div class="form-group">
                 <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
             </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group" style="width: 100%;">
+            <input type="submit" value="Submit">
         </div>
 
         <!-- Radio Buttons for Gender -->
@@ -118,18 +123,14 @@
             <label>Gender:</label>
             <div class="radio-group">
                 <label for="male">Male</label>
-                <input type="radio" id="male" name="gender" value="Male">
+                <input type="radio" id="male" name="gender" value="Male" aria-label="Male">
 
                 <label for="female">Female</label>
-                <input type="radio" id="female" name="gender" value="Female">
+                <input type="radio" id="female" name="gender" value="Female" aria-label="Female">
 
                 <label for="others">Others</label>
-                <input type="radio" id="others" name="gender" value="Other">
+                <input type="radio" id="others" name="gender" value="Other" aria-label="Other">
             </div>
-        </div>
-
-        <div class="form-group" style="width: 100%;">
-            <input type="submit" value="Submit">
         </div>
     </form>
     
