@@ -4,57 +4,137 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercise 3.1</title>
     <style>
-    h2 {
-        text-align: center;
-    }
+        body {
+            font-family: Arial, sans-serif;
+        }
 
-    form {
-        text-align: center;
-    }
-</style>
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgb(3, 119, 109);
+            color: white;
+        }
+
+        .form-column {
+            display: flex;
+            flex-direction: column;
+            width: 48%;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            width: 160px;
+            margin-right: 10px;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        input, select {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .radio-group label {
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Application Form </h2>
-    
-        <form>
-            
-        <label for="firstname">First Name:</label>
-        <input type="text" id="firstname" name="firstname" required>
+    <h2>Application Form</h2>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label for="lastname">Last Name:</label>
-        <input type="text" id="lastname" name="lastname" required>
-        <br><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-         Date of Birth  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="date" id="birthdate" name="birthdate" required>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         Age <input type="number" id="age" name="age" min="1" max="150" required>
-            <br><br>
+    <form>
+        <!-- Left Column -->
+        <div class="form-column">
+            <div class="form-group">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
 
-         Gender
-         <select>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Others</option>
-         </select>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         Email Address
-         <input type="email" id="email" name="email" required>
+            <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
 
+            <div class="form-group">
+                <label for="birthdate">Date of Birth:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+        </div>
 
+        <!-- Right Column -->
+        <div class="form-column">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" max="150" required>
+            </div>
 
-    
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
 
-        </form>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        </div>
+    </form>
 
+    <!-- If you still want to keep radio buttons -->
+    <div class="radio-group">
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender-radio">
 
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender-radio">
 
+        <label for="others">Others</label>
+        <input type="radio" id="others" name="gender-radio">
+    </div>
 
-    
 </body>
 </html>
