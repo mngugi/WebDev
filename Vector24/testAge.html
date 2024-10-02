@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date of Birth and Age</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <fieldset>
+        <legend>User Personal Information</legend>
+
+        <!-- Date of Birth Input -->
+        <label for="birthdate">Date of Birth</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+        <br><br>
+
+        <!-- Age Input -->
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="1" max="150" required>
+
+    </fieldset>
+
+</body>
+</html>
