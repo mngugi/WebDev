@@ -17,42 +17,49 @@
 
         form {
             display: flex;
-            justify-content: space-between; /* Distribute left and right fields */
+            justify-content: space-between;
             max-width: 800px;
-            margin: 0 auto; /* Center form on the page */
+            margin: 0 auto;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 10px;
         }
 
-        .form-group {
+        .form-column {
             display: flex;
             flex-direction: column;
             width: 48%; /* Each column takes up 48% of the form width */
         }
 
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
         label {
-            margin-bottom: 5px;
+            width: 160px; /* Increased width for longer labels */
+            margin-right: 10px;
+            text-align: right;
             font-weight: bold;
         }
 
         input, select {
             padding: 8px;
-            margin-bottom: 20px;
             border-radius: 5px;
             border: 1px solid #ddd;
-            width: 100%;
+            width: 100%; /* Input fields fill the remaining space */
+            max-width: 250px; /* Maximum width for consistency */
         }
 
         input[type="submit"] {
-            grid-column: span 2; /* Span across both columns */
             padding: 10px;
             background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            width: 100%; /* Full width */
+            width: 100%; /* Full width for submit button */
         }
 
         input[type="submit"]:hover {
@@ -65,41 +72,47 @@
 
     <form>
         <!-- Left Column -->
-        <div class="form-group">
-            <!-- First Name -->
-            <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" name="firstname" required>
+        <div class="form-column">
+            <div class="form-group">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
 
-            <!-- Last Name -->
-            <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="lastname" required>
+            <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
 
-            <!-- Date of Birth -->
-            <label for="birthdate">Date of Birth:</label>
-            <input type="date" id="birthdate" name="birthdate" required>
+            <div class="form-group">
+                <label for="birthdate"style="width: 250px; display: inline-block;"> Date of Birth:</label>
+
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
         </div>
 
         <!-- Right Column -->
-        <div class="form-group">
-            <!-- Age -->
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" min="1" max="150" required>
+        <div class="form-column">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" max="150" required>
+            </div>
 
-            <!-- Gender -->
-            <label for="gender">Gender:</label>
-            <select id="gender" name="gender">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-            </select>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
 
-            <!-- Email Address -->
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
+            <div class="form-group">
+                <label for="email" style="width: 250px; display: inline-block;">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
         </div>
 
-        <!-- Submit Button -->
-        <input type="submit" value="Submit">
+       
     </form>
 </body>
 </html>
