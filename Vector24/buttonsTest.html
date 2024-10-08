@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Button</title>
+    <style>
+        /* General button and link styling */
+        button, a {
+            display: inline-block;
+            padding: 15px 0; /* Adjust padding for equal height */
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            margin: 4px;
+            cursor: pointer;
+            width: 200px; /* Set a fixed width */
+            border-radius: 5px;
+        }
+
+        /* Individual button colors */
+        .red {
+            background-color: green;
+            color: red;
+            border: none;
+        }
+        
+        .yellow {
+            background-color: yellow;
+            color: green;
+            border: none;
+        }
+
+        .violet {
+            background-color: cyan;
+            color: blueviolet;
+            border: none;
+        }
+
+        .aqua {
+            background-color: blue;
+            color: aqua;
+            border: none;
+        }
+
+        /* Flexbox layout for button container */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* Adjusts if the screen is too small */
+            justify-content: center; /* Center align buttons */
+            gap: 10px; /* Space between buttons */
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Button</h2>
+    <div class="button-container">
+        <button type="button" class="red"><span>Default Button</span></button>
+        <a href="page10.html" class="yellow"><span>Link Button</span></a>
+        <button type="button" class="violet"><span>Button</span></button>
+        <button type="button" class="aqua"><span>Input Button</span></button>
+    </div>
+</body>
+</html>
