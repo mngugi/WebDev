@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Links</title>
-    <style>
-        div {background-color: green;}
-        div a {text-decoration: none;
-            color: white;
-            font-size: 20px;
-            padding: 15px;
-            display: inline-block;
-        }
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.">
+ <title>List Links</title>
+ <style>
+  div {
+    background-color: green;
+  }
+  div a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    display: inline-block;
+  }
 
-        ul {
-            display: inline;
-            margin: 0;
-            padding: 0;
-        }
+  ul {
+    display: inline;
+    margin: ;
+    padding: ;
+  }
 
-        ul li :{display: inline-block;}
-        ul li :{hover{ background: #555;}}
-        ul li :{hover ul{display: black;}}
+  ul li {
+    display: inline-block;
+    position: relative; /* Added for proper dropdown positioning */
+  }
 
-        ul li ul { position: absolute;
-                   width: 200px;
-                   display: none; 
-        }
+  ul li:hover ul {
+    display: block; /* Show dropdown on hover */
+  }
 
-        ul li ul li { background: #555;
-            display: black;
-        
-        }
+  ul li ul {
+    position: absolute;
+    width: 200px;
+    display: none; /* Hide dropdown by default */
+    background: #555; /* Background color for dropdown */
+  }
 
-        
-    </style>
+  ul li ul li {
+    display: block; /* Display list items in dropdown */
+  }
+
+  ul li ul li a {
+    color: white; /* Text color for dropdown items */
+    padding: 10px; /* Padding for dropdown items */
+    display: block; /* Ensure full clickable area */
+  }
+
+  ul li ul li a:hover {
+    background: #777; /* Change background on hover for dropdown items */
+  }
+ </style>
 </head>
 <body>
-    <div>
-        <a href="homepage1.html" > Home Page</a>
-        <ul>
-            <li>
-                <a href="#"> list of Countries</a>
-                <ul>
-                    <li><a href="Uganda.html"> Uganda</a></li>
-                    <li><a href="Kenya.html"> Uganda</a></li>
-                    <li><a href="Tanzania.html"> Uganda</a></li>
-                </ul>
-            </li>
-
-        </ul>
-    </div>
+ <div>
+  <a href="homepage.html">Home Page</a>
+  <ul>
+    <li>
+      <a href="#">List of Countries</a>
+      <ul>
+        <li><a href="Uganda.html">Uganda</a></li>
+        <li><a href="Kenya.html">Kenya</a></li>
+        <li><a href="Tanzania.html">Tanzania</a></li>
+      </ul>
+    </li>
+  </ul>
+ </div>
 </body>
 </html>
