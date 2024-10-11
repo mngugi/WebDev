@@ -17,10 +17,32 @@
         li{
             float: left;
         }
+        li a {
+            display: block;
+            color: blue;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        .active{
+            background-color: darkgrey;
+            color: white;
+        }
+        li a:hover{
+            background-color: orange;
+            color: white;
+
+        }
 
     </style>
 </head>
 <body>
-    
+    <ul>
+        <li><a class="active" href="homepage.html">Home</a></li>
+        <li><a href="#">Java</a></li>
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+      </ul>
 </body>
 </html>
