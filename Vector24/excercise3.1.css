@@ -14,7 +14,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #004d4d;
+    background-color: rgb(2, 80, 67);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -83,4 +83,8 @@ input[type="checkbox"] {
 .submit-btn:hover,
 .reset-btn:hover {
     background-color: #cc5200;
+}
+
+.bodybg-color {
+    background-color: whitesmoke;
 }
