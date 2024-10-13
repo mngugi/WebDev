@@ -74,6 +74,8 @@
 
             .label1{ width: 60%;}
 
+            form{ background-color: blanchedalmond;}
+
     </style>
 </head>
 <body>
@@ -84,7 +86,7 @@
             </legend>
 
             <label>Enter your full name</label>
-            <input type="text" name="name"/>
+            <input type="text" name="name" required/>
 
             <label> Enter your email</label>
             <input
@@ -95,13 +97,43 @@
                 <input
                     type="password"
                     name="pass"
-                />
+                required/>
 
             <label>Confirm your password</label>
             <input
                     type="password"
                     name="confirmPass"
-                />
+                required/>
+
+                <label>Enter your gender</label>
+                <input
+                    type="radio"
+                    name="gender"
+                    value="male"
+                required/>Male
+                <input
+                    type="radio"
+                    name="gender"
+                    value="female"
+                required/>Female
+                <input
+                    type="radio"
+                    name="gender"
+                    value="others"
+               required/>Others
+                <label
+                    >Enter your Date of
+                    Birth</label
+                >
+                <input type="date" name="dob" required/>
+                <label>Enter your Address:</label>
+                <textarea
+                    name="address"
+                ></textarea>
+                <input
+                    type="submit"
+                    value="submit"
+               required/>
 
 
         </fieldset>
