@@ -50,13 +50,16 @@
         event.preventDefault();
 
         const firstname = document.getElementById("firstname").value;
+        const middleName = document.getElementById("middleName").value;
         const lastname = document.getElementById("lastname").value;
+
 
         const table = document.getElementById("customerTable");
             const newRow = table.insertRow();
 
             newRow.insertCell(0).innerText = firstname;
-            newRow.insertCell(1).innerText = lastname;
+            newRow.insertCell(1).innerText=middleName;
+            newRow.insertCell(2).innerText = lastname;
             
 
             document.getElementById("customerForm").reset();
