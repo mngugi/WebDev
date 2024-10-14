@@ -24,6 +24,18 @@
     <input type="text" size="30" id="lastname" name="Last Name" required >
     <br><br>
 
+    <table id="customerTable">
+        <tbody>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+
+        </tr>
+
+    </tbody>
+
+    </table>
+
     <button type="submit">Submit</button>
 
 
@@ -34,6 +46,17 @@
 
         const firstname = document.getElementById("firstname").value;
         const lastname = document.getElementById("lastname").value;
+
+        const table = document.getElementById("customerTable");
+            const newRow = table.insertRow();
+
+
+
+            newRow.insertCell(0).innerText = firstname;
+            newRow.insertCell(1).innerText = lastname;
+            
+
+            document.getElementById("customerForm").reset();
 
 
 
