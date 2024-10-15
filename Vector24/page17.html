@@ -13,7 +13,7 @@
     <h2> <b font-color="red" >Fill this form</b> </h2>
     <form id="customerForm" method="post">
 
-        First Name:<input type="text" id="firstname" placeholder="fistname" required>
+        First Name:<input type="text" id="firstname" placeholder="firstname" required>
         <br><br>
 
 
@@ -29,7 +29,7 @@
         Email:<input type="email" id="email" name="email" required>
         <br><br>
 
-        Multiple Emails: <input type="email" id="email" name="email" multiple>
+        Multiple Emails: <input type="multiemail" id="multiemail" name="multiemail" multiple>
         <br><br>
 
         Date of Birth: <input type="date" id="birthdate" name="birthdate" required>
@@ -61,6 +61,15 @@
 
         <button type="submit" value="Submit">Submit</button>
     </form>
+    <script>
+        document.getElementById("customerForm").addEventListener("submit", function event){
+            event.preventDefault;
+
+        const firstname = document.getElementById("firstname").value;
+        const lastname = document.getElementById("lastname").value;
+        const 
+        }
+    </script>
 
 </body>
 </html>
