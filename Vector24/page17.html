@@ -63,7 +63,7 @@
     </form>
     <script>
         document.getElementById("customerForm").addEventListener("submit", function (event){
-            event.preventDefault;
+            event.preventDefault();
 
         const firstname = document.getElementById("firstname").value;
         const lastname = document.getElementById("lastname").value;
@@ -78,11 +78,11 @@
 
         newRow.insertCell(0).innerText = firstname;
         newRow.insertCell(1).innerText = lastname;
-        newRow.innertCell(2).innerText = email;
-        newRow.innertCell(3).innerText = multiemail;
-        newRow.innertCell(4).innerText = birthdate;
-        newRow.innertCell(5).innerText = empdate;
-        newRow.innertCell(6).innerText = comments;
+        newRow.insertCell(2).innerText = email;
+        newRow.insertCell(3).innerText = multiemail;
+        newRow.insertCell(4).innerText = birthdate;
+        newRow.insertCell(5).innerText = empdate;
+        newRow.insertCell(6).innerText = comments;
 
         document.getElementById("customerForm").reset();
 
