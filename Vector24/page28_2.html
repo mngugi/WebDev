@@ -6,14 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animated Text</title>
     <style>
-        h2{
+        h2 {
             font-size: 36px;
             font-weight: bold;
-            animation: text-shadow 1s case-in-out infinite alternate;
+            animation: textShadow 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes textShadow {
+            from {
+                text-shadow: 2px 2px #333;
+            }
+            to {
+                text-shadow: 10px 10px red; 
+            }
         }
     </style>
 </head>
 <body>
-    
+    <h2>Animated Text Shadow</h2>
 </body>
 </html>
