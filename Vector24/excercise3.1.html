@@ -31,17 +31,55 @@
         .form-column {
             display: flex;
             flex-direction: column;
-            width: 48%; /* Each column takes up 48% of the form width */
+            width: 48%;
         }
 
-        .form-group {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+        /* Style for form group container */
+.form-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Ensures even spacing between buttons */
+    margin-bottom: 20px; /* Add some spacing below each form group */
+}
+
+/* General button styles */
+input[type="submit"], input[type="reset"] {
+    padding: 12px 20px; /* Add padding for larger click area */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    width: 48%; /* Set each button to take 48% of the container's width */
+    font-size: 16px; /* Make the font size more visible */
+    transition: background-color 300ms ease, box-shadow 300ms ease; /* Smooth transitions */
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+}
+
+/* Style for the reset button */
+input[type="reset"] {
+    background-color: #f44336; /* Red background */
+    color: white; /* White text */
+}
+
+/* Hover effect for submit button */
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+    box-shadow: 0px 0px 10px rgba(0, 128, 0, 0.5); /* Add shadow effect */
+}
+
+/* Hover effect for reset button */
+input[type="reset"]:hover {
+    background-color: #e53935; /* Darker red on hover */
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5); /* Add shadow effect */
+}
+
 
         label {
-            width: 160px; /* Consistent width for labels */
+            width: 160px;
             margin-right: 10px;
             text-align: right;
             font-weight: bold;
@@ -51,31 +89,22 @@
             padding: 8px;
             border-radius: 5px;
             border: 1px solid #ddd;
-            width: 100%; /* Input fields fill the remaining space */
-            max-width: 250px; /* Maximum width for consistency */
+            width: 100%;
+            max-width: 250px;
         }
 
-        input[type="submit"] {
+        input[type="submit"], input[type="reset"] {
             padding: 10px;
             background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            width: 100%; /* Full width for submit button */
+            width: 100%;
         }
 
-        input[type="submit"]:hover {
+        input[type="submit"]:hover, input[type="reset"]:hover {
             background-color: #45a049;
-        }
-
-        .radio-group {
-            margin-bottom: 20px;
-        }
-
-        .radio-group label {
-            margin-right: 10px; /* Space between radio button labels */
-            text-align: left; /* Aligns text to the left */
         }
     </style>
 </head>
@@ -96,9 +125,8 @@
             </div>
 
             <div class="form-group">
-                <label for="birthdate" style="width: 250px; display: inline-block;">Date of Birth:</label>
+                <label for="birthdate">Date of Birth:</label>
                 <input type="date" id="birthdate" name="birthdate" required>
-
             </div>
         </div>
 
@@ -108,7 +136,6 @@
                 <label for="age">Age:</label>
                 <input type="number" id="age" name="age" min="1" max="150" required>
             </div>
-
 
             <div class="form-group">
                 <label for="gender">Gender:</label>
@@ -120,20 +147,18 @@
             </div>
 
             <div class="form-group">
-                <label for="email" style="width: 250px; display: inline-block;">Email Address:</label>
+                <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" required>
             </div>
         </div>
 
-
-
+        <!-- Submit and Reset Buttons -->
         <div class="form-group" style="width: 100%;">
-            <input type="submit" value="Submit"></button>
+            <input type="submit" value="Submit">
         </div>
         <div class="form-group" style="width: 100%;">
-            <input type="submit" value="Reset">
+            <input type="reset" value="Reset">
         </div>
     </form>
-
 </body>
 </html>
