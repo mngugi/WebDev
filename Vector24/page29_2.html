@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Reveal Animation</title>
+    <style> 
+        body { 
+            background: green; 
+        } 
+
+        .move { 
+            width: 20%; 
+            top: 50%; 
+            position: absolute; 
+            left: 40%; 
+            border-bottom: 5px solid RED; 
+            overflow: hidden; 
+            animation: animate 5s linear forwards; 
+        } 
+
+        .move h1 { 
+            color: white; 
+        } 
+
+        @keyframes animate { 
+            0% { 
+                width: 0px; 
+                height: 50px; 
+            } 
+
+            30% { 
+                width: 100px; 
+                height: 0px; 
+            } 
+
+            60% { 
+                width: 300px; 
+                height: 150px; 
+                
+               
+            } 
+        } 
+    </style> 
+
+</head>
+<body>
+    
+</body>
+</html>
