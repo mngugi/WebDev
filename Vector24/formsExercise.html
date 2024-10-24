@@ -13,24 +13,19 @@
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
-            
         }
         form {
             width: 400px;
-            background-color: #fff;
+            background-color: blanchedalmond;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-
         }
-
         fieldset {
             border: 1px solid black;
             padding: 10px;
             margin: 0;
         }
-
         legend {
             display: block;
             margin-bottom: 5px;
@@ -38,103 +33,52 @@
         label {
             display: block;
             margin-bottom: 5px;
-            font-feature-settings: "abvf";
         }
         input[type="text"],
-            input[type="email"],
-            input[type="password"],
-            textarea,
-            input[type="date"] {
-                width: calc(100% - 20px);
-                padding: 8px;
-                margin-bottom: 10px;
-                box-sizing: border-box;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-            }
-            input[type="radio"] {
-                margin-left: 20px;
-            }
-
-            input[type="submit"] {
-                padding: 10px 20px;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-            .row {
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 15px;
-            }
-
-
-            .column {
-                      width: 48%;
-            }
-
-            .label1{ width: 60%;}
-
-            form{ background-color: blanchedalmond;}
-
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        input[type="date"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"] {
+            margin-left: 20px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <form id="my-form">
+    <form id="my-form" action="/submit" method="post">
         <fieldset>
-            <legend>
-                User Information
-            </legend>
-
-            <label>Enter your full name</label>
-            <input type="text" name="name" required>
-
-            <label> Enter your email</label>
-            <input
-                    type="email"
-                    name="email"
-                >
-            <label class="label1">Enter your password</label>
-                <input
-                    type="password"
-                    name="pass"
-                required>
-
-            <label>Confirm your password</label>
-            <input
-                    type="password"
-                    name="confirmPass"
-                required>
-
-                <label>Enter your gender</label>
-                <input
-                    type="radio"
-                    name="gender"
-                    value="male"
-                required>Male
-                <input
-                    type="radio"
-                    name="gender"
-                    value="female"
-                required>Female
-                <input
-                    type="radio"
-                    name="gender"
-                    value="others"
-               required>Others
-                <label
-                    >Enter your Date of
-                    Birth</label
-                >
-                <input type="date" name="dob" required>
-                <label>Enter your Address:</label>
-                <textarea
-                    name="address"
-                ></textarea>
-                <button type="button"             
-                    value="submit"
-              >Submit</button>
-
+            <legend>User Information</legend>
+            <label for="name">Enter your full name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Enter your email</label>
+            <input type="email" id="email" name="email">
+            <label for="pass">Enter your password</label>
+            <input type="password" id="pass" name="pass" required>
+            <label for="confirmPass">Confirm your password</label>
+            <input type="password" id="confirmPass" name="confirmPass" required>
+            <label>Enter your gender</label>
+            <div>
+                <input type="radio" name="gender" value="male" required>Male
+                <input type="radio" name="gender" value="female" required>Female
+                <input type="radio" name="gender" value="others" required>Others
+            </div>
+            <label for="dob">Enter your Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+            <label for="address">Enter your Address:</label>
+            <textarea id="address" name="address"></textarea>
+            <button type="submit" value="submit">Submit</button>
         </fieldset>
     </form>
 </body>
