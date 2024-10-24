@@ -17,7 +17,7 @@
 
         form {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
@@ -25,6 +25,12 @@
             border-radius: 5px;
             background-color: rgb(3, 119, 109);
             color: white;
+        }
+
+        .form-content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
         }
 
         .form-column {
@@ -48,47 +54,50 @@
             max-width: 250px;
         }
 
-        /* Style for form group container */
         .form-group {
-            width: 100%;
-            display: flex;
-            justify-content: space-between; /* Ensures even spacing between buttons */
-            margin-bottom: 20px; /* Add some spacing below each form group */
+            margin-bottom: 20px;
         }
 
-        /* General button styles */
+        /* Button Group */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px; /* Add space between form content and buttons */
+        }
+
         input[type="submit"], input[type="reset"] {
-            padding: 12px 20px; /* Add padding for larger click area */
-            border-radius: 5px; /* Rounded corners */
-            border: none; /* Remove default border */
-            cursor: pointer; /* Change cursor to pointer on hover */
-            width: 48%; /* Set each button to take 48% of the container's width */
-            font-size: 16px; /* Make the font size more visible */
-            transition: background-color 300ms ease, box-shadow 300ms ease; /* Smooth transitions */
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 300ms ease, box-shadow 300ms ease;
+            margin: 0 10px; /* Add space between buttons */
+            width: 150px; /* Fixed width for consistency */
         }
 
         /* Style for the submit button */
         input[type="submit"] {
-            background-color: #4CAF50; /* Green background */
-            color: white; /* White text */
+            background-color: #4CAF50;
+            color: white;
         }
 
         /* Style for the reset button */
         input[type="reset"] {
-            background-color: #f44336; /* Red background */
-            color: white; /* White text */
+            background-color: #f44336;
+            color: white;
         }
 
         /* Hover effect for submit button */
         input[type="submit"]:hover {
-            background-color: #45a049; /* Darker green on hover */
-            box-shadow: 0px 0px 10px rgba(0, 128, 0, 0.5); /* Add shadow effect */
+            background-color: #45a049;
+            box-shadow: 0px 0px 10px rgba(0, 128, 0, 0.5);
         }
 
         /* Hover effect for reset button */
         input[type="reset"]:hover {
-            background-color: #e53935; /* Darker red on hover */
-            box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5); /* Add shadow effect */
+            background-color: #e53935;
+            box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
         }
     </style>
 </head>
@@ -96,50 +105,53 @@
     <h2>Application Form</h2>
 
     <form>
-        <!-- Left Column -->
-        <div class="form-column">
-            <div class="form-group">
-                <label for="firstname">First Name:</label>
-                <input type="text" id="firstname" name="firstname" required>
+        <!-- Form Content -->
+        <div class="form-content">
+            <!-- Left Column -->
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="birthdate">Date of Birth:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="lastname">Last Name:</label>
-                <input type="text" id="lastname" name="lastname" required>
-            </div>
+            <!-- Right Column -->
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="1" max="150" required>
+                </div>
 
-            <div class="form-group">
-                <label for="birthdate">Date of Birth:</label>
-                <input type="date" id="birthdate" name="birthdate" required>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
             </div>
         </div>
 
-        <!-- Right Column -->
-        <div class="form-column">
-            <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" min="1" max="150" required>
-            </div>
-
-            <div class="form-group">
-                <label for="gender">Gender:</label>
-                <select id="gender" name="gender">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-        </div>
-
-        <!-- Submit and Reset Buttons -->
-        <div class="form-group">
-            <button type="submit" value="Submit">Submit</button>
-            <button type="reset" value="Reset">Reset</button>
+        <!-- Button Group at the Bottom -->
+        <div class="button-group">
+            <button type="submit" value="Submit">submit</button>
+            <button type="reset" value="Reset">reset</button>
         </div>
     </form>
 </body>
