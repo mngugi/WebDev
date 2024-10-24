@@ -19,7 +19,6 @@
             display: flex;
             justify-content: space-between;
             max-width: 800px;
-            max-height: auto;
             margin: 0 auto;
             padding: 20px;
             border: 1px solid #ccc;
@@ -33,50 +32,6 @@
             flex-direction: column;
             width: 48%;
         }
-
-        /* Style for form group container */
-.form-group {
-    width: 100%;
-    display: flex;
-    justify-content: space-between; /* Ensures even spacing between buttons */
-    margin-bottom: 20px; /* Add some spacing below each form group */
-}
-
-/* General button styles */
-input[type="submit"], input[type="reset"] {
-    padding: 12px 20px; /* Add padding for larger click area */
-    border-radius: 5px; /* Rounded corners */
-    border: none; /* Remove default border */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    width: 48%; /* Set each button to take 48% of the container's width */
-    font-size: 16px; /* Make the font size more visible */
-    transition: background-color 300ms ease, box-shadow 300ms ease; /* Smooth transitions */
-}
-
-/* Style for the submit button */
-input[type="submit"] {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-}
-
-/* Style for the reset button */
-input[type="reset"] {
-    background-color: #f44336; /* Red background */
-    color: white; /* White text */
-}
-
-/* Hover effect for submit button */
-input[type="submit"]:hover {
-    background-color: #45a049; /* Darker green on hover */
-    box-shadow: 0px 0px 10px rgba(0, 128, 0, 0.5); /* Add shadow effect */
-}
-
-/* Hover effect for reset button */
-input[type="reset"]:hover {
-    background-color: #e53935; /* Darker red on hover */
-    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5); /* Add shadow effect */
-}
-
 
         label {
             width: 160px;
@@ -93,18 +48,47 @@ input[type="reset"]:hover {
             max-width: 250px;
         }
 
-        input[type="submit"], input[type="reset"] {
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        /* Style for form group container */
+        .form-group {
             width: 100%;
+            display: flex;
+            justify-content: space-between; /* Ensures even spacing between buttons */
+            margin-bottom: 20px; /* Add some spacing below each form group */
         }
 
-        input[type="submit"]:hover, input[type="reset"]:hover {
-            background-color: #45a049;
+        /* General button styles */
+        input[type="submit"], input[type="reset"] {
+            padding: 12px 20px; /* Add padding for larger click area */
+            border-radius: 5px; /* Rounded corners */
+            border: none; /* Remove default border */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            width: 48%; /* Set each button to take 48% of the container's width */
+            font-size: 16px; /* Make the font size more visible */
+            transition: background-color 300ms ease, box-shadow 300ms ease; /* Smooth transitions */
+        }
+
+        /* Style for the submit button */
+        input[type="submit"] {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+        }
+
+        /* Style for the reset button */
+        input[type="reset"] {
+            background-color: #f44336; /* Red background */
+            color: white; /* White text */
+        }
+
+        /* Hover effect for submit button */
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green on hover */
+            box-shadow: 0px 0px 10px rgba(0, 128, 0, 0.5); /* Add shadow effect */
+        }
+
+        /* Hover effect for reset button */
+        input[type="reset"]:hover {
+            background-color: #e53935; /* Darker red on hover */
+            box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5); /* Add shadow effect */
         }
     </style>
 </head>
@@ -153,11 +137,9 @@ input[type="reset"]:hover {
         </div>
 
         <!-- Submit and Reset Buttons -->
-        <div class="form-group" style="width: 100%;">
-            <input type="submit" value="Submit">
-        </div>
-        <div class="form-group" style="width: 100%;">
-            <input type="reset" value="Reset">
+        <div class="form-group">
+            <button type="submit" value="Submit">Submit</button>
+            <button type="reset" value="Reset">Reset</button>
         </div>
     </form>
 </body>
