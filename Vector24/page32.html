@@ -10,7 +10,9 @@
     <h1>Call Functions to Perform Calculations and Display Results</h1>
     <p>Multiplication Result: <span id="demoMulti"></span></p>
     <p>Sum Result: <span id="demoSum"></span></p>
-    
+    <p>Subtraction Result:<span id="demoSubtract"></span></p>
+    <p></p>
+
     <script>
         function myFunctionMulti(p1, p2) {
             return p1 * p2;
@@ -20,12 +22,19 @@
             return p1 + p2;
         }
 
+        function myFunctionSubtraction(p1,p2) {
+            return p1 - p2;
+        }
+
         // Display each result in its respective element
         let resultMulti = myFunctionMulti(12, 5);
         document.getElementById("demoMulti").innerHTML = resultMulti;
 
         let resultSum = myFunctionSum(12, 5);
         document.getElementById("demoSum").innerHTML = resultSum;
+
+        let resultSubt = myFunctionSubtraction(12, 5);
+        document.getElementById("demoSubtract").innerHTML = resultSubt;
     </script>
 </body>
 </html>
