@@ -10,10 +10,14 @@
     <h1> Call a function which performs calculations and returns results. </h1>
     <p id = "demo"></p>
     <script>
-        function myFunction(p1,p2){
+        function myFunctionMulti(p1,p2){
             return p1 * p2;
         }
-        let result = myFunction(12,5);
+
+        function myFunctionSum(p1,p2){
+            return p1 + p2;
+        }
+        let result = myFunctionMulti(12,5);
         document.getElementById("demo").innerHTML=result;
     </script>
 </body>
