@@ -7,18 +7,25 @@
     <title>Function Call</title>
 </head>
 <body>
-    <h1> Call a function which performs calculations and returns results. </h1>
-    <p id = "demo"></p>
+    <h1>Call Functions to Perform Calculations and Display Results</h1>
+    <p>Multiplication Result: <span id="demoMulti"></span></p>
+    <p>Sum Result: <span id="demoSum"></span></p>
+    
     <script>
-        function myFunctionMulti(p1,p2){
+        function myFunctionMulti(p1, p2) {
             return p1 * p2;
         }
 
-        function myFunctionSum(p1,p2){
+        function myFunctionSum(p1, p2) {
             return p1 + p2;
         }
-        let result = myFunctionMulti(12,5);
-        document.getElementById("demo").innerHTML=result;
+
+        // Display each result in its respective element
+        let resultMulti = myFunctionMulti(12, 5);
+        document.getElementById("demoMulti").innerHTML = resultMulti;
+
+        let resultSum = myFunctionSum(12, 5);
+        document.getElementById("demoSum").innerHTML = resultSum;
     </script>
 </body>
 </html>
