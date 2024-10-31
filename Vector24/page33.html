@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Html Events</title>
+    <title>JS HTML Events</title>
 </head>
 <body>
-    <h1>JavaScript Html Events</h1>
-    <h2>The onlick Attribute</h2>
+    <h1>JavaScript HTML Events</h1>
+    <h2>The onclick Attribute</h2>
+
+    <!-- Button to trigger the function -->
+    <button type="button" onclick="displayDate()">Click to load Date and Time</button>
+
+    <!-- Paragraph to display the date -->
+    <p id="demo"></p>
+
     <script>
-        function displayDate(){
-            document.getElementById('demo').Date();
+        function displayDate() {
+            // Set the innerHTML of 'demo' to the current date and time
+            document.getElementById('demo').innerHTML = new Date();
         }
     </script>
-    <p id="demo"></p>
 </body>
 </html>
