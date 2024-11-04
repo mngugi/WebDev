@@ -17,6 +17,15 @@
     <p>Use the b tag instead:</p>
 
     <p id="demo2"></p>
+    <script>
+        let text = "Global Warming!";
+        let result = text.bold();
+
+        document.getElementById("demo1").innerHTML = result;
+
+        text = "<b>Hello World!</b>"
+        document.getElementById("demo2").innerHTML = text;
+    </script>
 </body>
 
 </html>
