@@ -20,9 +20,11 @@
     <p id="demo2"></p>
     <script>
         let text = "Global warming!";
-        let result = text.fontcolor("yellow");
+        let result = text.fontcolor("red");
 
         document.getElementById("demo").innerHTML = result;
+        result = "<span style='color:green'>" + text + "</span>";
+        document.getElementById("demo2").innerHTML = result;
     </script>
 
 </body>
