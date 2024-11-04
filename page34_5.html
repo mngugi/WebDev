@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Script Methods</title>
+    <title>JavaScript String Methods</title>
 </head>
 
 <body>
@@ -13,17 +13,20 @@
     <h2>The bold() Method</h2>
 
     <p id="demo1"></p>
-    <p>The bold() method is deprecated in JavaScript.</p>
-    <p>Use the b tag instead:</p>
+    <p>The <code>bold()</code> method is deprecated in JavaScript and may not work in all browsers in the future.</p>
+    <p>Use the <code>&lt;b&gt;</code> tag instead:</p>
 
     <p id="demo2"></p>
+
     <script>
         let text = "Global Warming!";
-        let result = text.bold();
 
+        // Using the deprecated bold() method
+        let result = text.bold();
         document.getElementById("demo1").innerHTML = result;
 
-        text = "<b>Global Warming!</b>"
+        // Using the <b> HTML tag instead
+        text = "<b>Global Warming!</b>";
         document.getElementById("demo2").innerHTML = text;
     </script>
 </body>
