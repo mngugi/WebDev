@@ -5,13 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Java Script changeFontColor()</title>
 </head>
 
 <body>
     <h2> Change the font color using JavaScript.</h2>
     <div id="fonts">Click the button to change the color of font inside the button.</div>
     <button type="button" onclick="changeFontColor()" id="btn">Change Color</button>
+    <script>
+        //function to change the font color button
+        function changeFontColor() {
+            let button = document.getElementById("btn"); // access the button by id
+            if (color === "red") { // button color hange from red to green otherwise change it to red
+                button.style.color = "green";
+            } else {
+                button.style.color = 'red';
+            }
+        }
+    </script>
 
 
 </body>
