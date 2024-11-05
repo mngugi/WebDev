@@ -6,9 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Clock with AM/PM</title>
+    <style>
+        .bodyDec {
+            background-color: bisque;
+            color: darkcyan;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+    </style>
 </head>
 
-<body onload="startTime()">
+<body onload="startTime()" class="bodyDec">
     <div id="txt"></div> <!-- Added this element to display the clock -->
 
     <script>
