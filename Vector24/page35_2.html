@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Clock with AM/PM</title>
+</head>
+
+<body onload="startTime()">
+    <div id="txt"></div> <!-- Added this element to display the clock -->
+
+    <script>
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+
+            // Determine AM or PM
+            const ampm = h >= 12 ? 'PM' : 'AM';
+
+            // Convert to 12-hour format
+            h = h % 12;
+            h = h ? h : 12; // If hour is 0, set it to 12
+
+            // Format minutes and seconds
+            m = checkTime(m);
+            s = checkTime(s);
+
+            // Display the time with AM/PM
+            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s + " " + ampm;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i; // Adds leading zero if needed
+            }
+            return i;
+        }
+    </script>
+
+</body>
+
+</html>
