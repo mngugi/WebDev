@@ -11,11 +11,12 @@
 <body>
     <script>
         var time = new Date();
-        document.write(time.toLocaleString('in-us')) {
-            hour: 'numeric';
-            minute: 'numeric';
-            hour12;
-        }
+        document.write(time.toLocaleString('en-US', {
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: true
+        }));
     </script>
 
 </body>
