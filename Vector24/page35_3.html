@@ -17,6 +17,17 @@
 <body class="bodyDeco">
     <script>
         const dateFormat = (date) {
+            let hour = date.getHours();
+            let minute = date.getMinutes();
+            let seconds = date.getSconds();
+
+            let x = hours >= 12 'pm': 'am';
+            hours = hours % 12;
+            minutes = minutes.toString().padStart(2, '0');
+
+            let mergeTime = hours + ':' + minutes + '' + x;
+
+            return mergeTime;
 
 
 
