@@ -8,30 +8,39 @@
     <title>Using Inline Function</title>
     <style>
         .bodyDeco {
-            color: darkolivegreen;
+            color: rgb(35, 49, 11);
             background-color: beige;
+            font-size: xx-large;
+            font-weight: bolder;
         }
     </style>
 </head>
 
 <body class="bodyDeco">
     <script>
-        const dateFormat = (date) {
+        const dateFormat = (date) => {
             let hour = date.getHours();
             let minute = date.getMinutes();
-            let seconds = date.getSconds();
+            let second = date.getSeconds();
 
-            let x = hours >= 12 'pm': 'am';
-            hours = hours % 12;
-            minutes = minutes.toString().padStart(2, '0');
+            // Determine AM or PM
+            let x = hour >= 12 ? 'PM' : 'AM';
 
-            let mergeTime = hours + ':' + minutes + '' + x;
+            // Convert to 12-hour format
+            hour = hour % 12;
+            hour = hour ? hour : 12; // If hour is 0, set it to 12
+
+            // Format minutes and seconds with leading zero
+            minute = minute.toString().padStart(2, '0');
+            second = second.toString().padStart(2, '0');
+
+            // Merge time with AM/PM
+            let mergeTime = hour + ':' + minute + ':' + second + ' ' + x;
 
             return mergeTime;
-
-
-
         }
+
+        document.write(dateFormat(new Date()));
     </script>
 
 </body>
