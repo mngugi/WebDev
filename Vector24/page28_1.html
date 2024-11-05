@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<!-- this is page13_1.html code -->
+<!--index.html is the main page -->
+<!-- Author: Peter Mwangi-->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,21 +16,42 @@
             background-color: rgb(214, 243, 87);
             font-weight: bold;
             position: relative;
-            animation:mymove 5s;
+            animation: mymove 5s;
             animation-fill-mode: forwards;
         }
-        #div1{ animation-timing-function: linear;}
-        #div2{ animation-timing-function:case;}
-        #div3{ animation-timing-function:case-in;}
-        #div4{ animation-timing-function:case-out;}
-        #div2{ animation-timing-function:case-in-out;}
+
+        #div1 {
+            animation-timing-function: linear;
+        }
+
+        #div2 {
+            animation-timing-function: case;
+        }
+
+        #div3 {
+            animation-timing-function: case-in;
+        }
+
+        #div4 {
+            animation-timing-function: case-out;
+        }
+
+        #div2 {
+            animation-timing-function: case-in-out;
+        }
 
         @keyframes mymove {
-            from{left:0px}
-            to{left:300px;}
+            from {
+                left: 0px
+            }
+
+            to {
+                left: 300px;
+            }
         }
     </style>
 </head>
+
 <body>
     <h1>CSS Moving Animations</h1>
     <p> Specifies the speed curve.</p>
@@ -36,4 +61,5 @@
     <div id="div4">case-out</div>
     <div id="div5">case-in-out</div>
 </body>
+
 </html>
