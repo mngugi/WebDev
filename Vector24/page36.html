@@ -12,7 +12,8 @@
     <p> Math.floor(Math.random()*10) returns a random integer between 0 and 9 (both included)</p>
     <p id="demo"></p>
     <script>
-        document.getElementById("demo").innerHTML = math.floor(Math.random * 10);
+        const randomNumber = Math.floor(Math.random() * 10);
+        document.getElementById("demo").innerHTML = "Random number: " + randomNumber;
     </script>
 
 </body>
