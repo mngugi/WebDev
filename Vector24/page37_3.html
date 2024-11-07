@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password Match</title>
 </head>
 
 <body>
@@ -14,19 +14,23 @@
             var firstpassword = document.f1.password.value;
             var secondpassword = document.f1.password2.value;
 
-            if (firstpassword == secondpassword) {
+            if (firstpassword === secondpassword) { // Using strict equality for consistency
                 return true;
             } else {
-                alert("password must be same!");
+                alert("Passwords must match!");
                 return false;
             }
         }
     </script>
 
-    <form name="f1" action="register.jsp" onsubmit="return matchpass()">
-        Password:<input type="password" name="password" /><br />
-        Re-enter Password:<input type="password" name="password2" /><br />
-        <input type="submit">
+    <form id="my-form" name="f1" action="register.jsp" onsubmit="return matchpass()">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter password" required><br>
+
+        <label for="password2">Re-enter Password:</label>
+        <input type="password" name="password2" id="password2" placeholder="Re-enter password" required><br>
+
+        <button form="my-form" type="submit" value="Register">Submit</button>
     </form>
 </body>
 
