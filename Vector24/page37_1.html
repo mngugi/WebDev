@@ -25,10 +25,10 @@
         }
     </script>
 
-    <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()">
+    <form id="my-form" name="myform" method="post" action="abc.jsp" onsubmit="return validateform()">
         Name: <input type="text" name="name" required><br> <!-- Added required attribute -->
         Password: <input type="password" name="password" required><br> <!-- Added required attribute -->
-        <button type="button" value="Register">Submit</button>
+        <button form="my-form" type="submit" value="Register">Submit</button>
     </form>
 </body>
 
