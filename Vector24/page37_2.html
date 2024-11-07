@@ -24,12 +24,11 @@
         }
     </script>
 
-    <body>
-        <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()">
-            Name: <input type="text" name="name"><br />
-            Password: <input type="password" name="password"><br />
-            <input type="submit" value="register">
-        </form>
-    </body>
+    <form id="my-form" name="myform" method="post" action="abc.jsp" onsubmit="return validateform()">
+        Name: <input type="text" name="name"><br />
+        Password: <input type="password" name="password"><br>
+        <button form="my-form" type="submit" value="Register">Submit</button>
+    </form>
+</body>
 
 </html>
