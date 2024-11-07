@@ -9,7 +9,7 @@
     <script>
         function submit_form() {
             // Get input values
-            const email = document.getElementById('email').;
+            const email = document.getElementById('email').value; // Added .value to retrieve the input value
             const password = document.getElementById('password').value;
             console.log("Email:", email);
             console.log("Password:", password);
@@ -25,11 +25,12 @@
 
 <body>
     <h3>Login</h3>
-    <form onsubmit="submit_form(); return false       
-    <input type=" Email" id="email" placeholder="Enter your email id" required>
+    <form onsubmit="submit_form(); return false;">
+        <!-- Corrected the onsubmit attribute -->
+        <input type="email" id="email" placeholder="Enter your email id" required>
         <input type="password" id="password" placeholder="Enter your password" required>
-        <button type="submit">
-        </button>
+        <button type="submit">Submit</button>
+        <!-- Added "Submit" text inside the button -->
     </form>
 </body>
 
