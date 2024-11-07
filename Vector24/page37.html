@@ -6,19 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Forms</title>
+    <script>
+        function submit_form() {
+            // Get input values
+            const email = document.getElementById('email').;
+            const password = document.getElementById('password').value;
+            console.log("Email:", email);
+            console.log("Password:", password);
+            // You can add your form submission logic here
+        }
+
+        function create() {
+            // Logic for signup can be added here
+            console.log("Signup clicked");
+        }
+    </script>
 </head>
 
 <body>
     <h3>Login</h3>
-    <form="https: //www.facebook.com" onsubmit="submit_form()" />
-    <input type="text" placeholder="Enter your email id">
-    <input type="password" placeholder="Enter your password">
-    <button type="button" value="login">Login</button>
-    <button type="button" value="signup" onclick="create()">Signup</button>
-
-
+    <form onsubmit="submit_form(); return false       
+    <input type=" Email" id="email" placeholder="Enter your email id" required>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <button type="submit">
+        </button>
     </form>
-
 </body>
 
 </html>
