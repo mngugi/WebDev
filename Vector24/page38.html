@@ -10,15 +10,34 @@
         .body {
             align-self: center;
             align-content: center;
+
             align-items: center;
-            background-color: rgb(223, 220, 217);
+            background-color: rgb(243, 227, 211);
+        }
+
+        .table {
+            width: 100%;
+            /* Optional: set the width of the table */
+            border-collapse: collapse;
+            /* Merge table borders */
+            text-align: center;
+            /* Center text in all cells */
+            background-color: azure;
+        }
+
+        .table th,
+        .table td {
+            border: 1px solid black;
+            /* Border around cells */
+            padding: 8px;
+            /* Space inside cells */
         }
     </style>
 </head>
 
 <body class="body">
     <h1> CREATE YOUR ACCOUNT</h1>
-    <table style:cellspacing="2" style:align="center" style:cellpadding="8" style:border="0">
+    <table class="table">
         <tbody>
             <tr>
                 <td> Name</td>
