@@ -11,25 +11,30 @@
 <body style:align="center">
     <h1> CREATE YOUR ACCOUNT</h1>
     <table style:cellspacing="2" style:align="center" style:cellpadding="8" style:border="0">
-        <tr>
-            <td> Name</td>
-            <td><input type="text" placeholder="Enter your name" id="n1"></td>
-        </tr>
-        <tr>
-            <td>Email </td>
-            <td><input type="text" placeholder="Enter your email id" id="e1"></td>
-        </tr>
-        <tr>
-            <td> Set Password</td>
-            <td><input type="password" placeholder="Set a password" id="p1"></td>
-        </tr>
-        <tr>
-            <td>Confirm Password</td>
-            <td><input type="password" placeholder="Confirm your password" id="p2"></td>
-        </tr>
-        <tr>
-            <td>
-                <button type="button" value="Create" onClick="create_account()">Submit</button>
+        <tbody>
+            <tr>
+                <td> Name</td>
+                <td><input type="text" placeholder="Enter your name" id="n1"></td>
+            </tr>
+            <tr>
+                <td>Email </td>
+                <td><input type="text" placeholder="Enter your email id" id="e1"></td>
+            </tr>
+            <tr>
+                <td> Set Password</td>
+                <td><input type="password" placeholder="Set a password" id="p1"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" placeholder="Confirm your password" id="p2"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" value="Create" onclick="create_account()">Submit</button>
+                </td>
+            </tr>
+        </tbody>
+
     </table>
     <script type="text/javascript">
         function create_account() {
