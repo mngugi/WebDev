@@ -64,6 +64,10 @@
             padding-top: 16px;
         }
 
+        .checked {
+            background-color: #ccc;
+        }
+
         /* Change styles for span and cancel button on extra small screens */
         @media screen and (max-width: 300px) {
             span.psw {
@@ -92,11 +96,11 @@
 
             <button type="submit">Login</button>
             <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
+                <input type="checkbox" stylechecked="checked" name="remember"> Remember me
             </label>
         </div>
 
-        <div class="container" style="background-color:#f1f1f1">
+        <div class="container" style="display:#f8b2b2;">
             <button type="button" class="cancelbtn">Cancel</button>
             <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
