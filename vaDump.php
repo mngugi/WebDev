@@ -8,6 +8,8 @@
 <body>
     <?php
     $j = 8;
+    $i= ("Ten");
+    var_dump(i);
     var_dump($j);
     ?>
 </body>
