@@ -7,11 +7,15 @@
 </head>
 <body>
     <?php
-    $j = 8;
-    $i= ("Ten");
-    var_dump($i);
-    echo ("<br>");
-    var_dump($j);
+    
+    
+    var_dump(2);
+    
+    var_dump(0.3);
+    var_dump(3.14);
+    var_dump(true);
+    var_dump([2, 3, 56]);
+    var_dump(NULL);
     ?>
 </body>
 </html>
