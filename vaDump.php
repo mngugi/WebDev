@@ -10,6 +10,7 @@
     $j = 8;
     $i= ("Ten");
     var_dump($i);
+    echo ("<br>");
     var_dump($j);
     ?>
 </body>
