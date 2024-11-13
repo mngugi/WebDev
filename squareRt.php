@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        echo(sqrt());
+        echo(sqrt(64));
 
     ?>
     
