@@ -7,6 +7,8 @@
 </head>
 <body>
     <?php
+
+        echo"<p>The value for pi is : </p>";
         echo(pi());
     ?>
     
