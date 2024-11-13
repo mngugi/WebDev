@@ -6,6 +6,9 @@
     <title>Mathematical Function PI</title>
 </head>
 <body>
+    <?php
+        echo(pi());
+    ?>
     
 </body>
 </html>
