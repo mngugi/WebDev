@@ -6,6 +6,20 @@
     <title>Php Form Validation</title>
 </head>
 <body>
-    
+    <?php
+        function myTest(){
+
+            static $j;
+            echo $j;
+            $j++;
+        }
+
+        myTest();
+        echo "<br>";
+        myTest();
+        echo "<br>";
+        myTest();
+        echo "<br>";
+    ?>
 </body>
 </html>
