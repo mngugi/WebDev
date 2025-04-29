@@ -47,5 +47,21 @@ Pull requests, suggestions, and feedback are welcome! Check out the [issues page
 ## 📌 Note
 This repository is constantly evolving — stay tuned for new UI elements, animations, and interactive demos.
 
+## 🎯 Objective
+- Make mathematical knowledge easily accessible.
+- Help students grasp key concepts efficiently.
+- Encourage self-study and quick revision.
+
+## 📜 License
+This project is licensed under the MIT License.
+
+## 🌟 Acknowledgments
+- Inspired by secondary school mathematics curricula worldwide.
+- Content carefully compiled and reviewed for accuracy.
+
+> "Pure mathematics is, in its way, the poetry of logical ideas."  
+> — Albert Einstein
+
+
 > *"Code is like humor. When you have to explain it, it’s bad."* — Cory House
 ***
