@@ -55,13 +55,6 @@ This repository is constantly evolving — stay tuned for new UI elements, anima
 ## 📜 License
 This project is licensed under the MIT License.
 
-## 🌟 Acknowledgments
-- Inspired by secondary school mathematics curricula worldwide.
-- Content carefully compiled and reviewed for accuracy.
-
-> "Pure mathematics is, in its way, the poetry of logical ideas."  
-> — Albert Einstein
-
 
 > *"Code is like humor. When you have to explain it, it’s bad."* — Cory House
 ***
