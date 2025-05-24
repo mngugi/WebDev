@@ -1,6 +1,7 @@
 # WebDev
 
 Welcome to **WebDev** — a curated collection of web development projects, code snippets, and experiments built with **HTML**, **CSS**, and **JavaScript**.
+***
 
 This repository serves as both a learning playground and a reference toolkit for modern frontend development practices, covering:
 
