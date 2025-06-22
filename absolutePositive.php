@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <!-- this is page13_1.html code -->
 <!--index.html is the main page -->
-<!-- Author: Peter Mwangi-->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
