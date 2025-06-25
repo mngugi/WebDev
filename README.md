@@ -1,4 +1,5 @@
 # WebDev
+---
 
 Welcome to **WebDev** — a curated collection of web development projects, code snippets, and experiments built with **HTML**, **CSS**, and **JavaScript**.
 ***
@@ -11,7 +12,7 @@ This repository serves as both a learning playground and a reference toolkit for
 - UI/UX components and layout patterns
 - Performance and accessibility considerations
 
----
+***
 
 ## 🚀 What's Inside
 - `projects/` — Complete mini-projects demonstrating real-world UI functionality
