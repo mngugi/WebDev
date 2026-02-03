@@ -8,11 +8,37 @@
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body class="bg-light">
 
 <div class="container py-4">
-    <h1 class="mb-4">⚡ EV Hub</h1>
-    <p class="text-muted">Electric car catalog powered by Flask API + Django UI</p>
+    <h1 class="mb-2">⚡ EV Hub</h1>
+    <p class="text-muted mb-4">Electric car catalog powered by Flask API + Django UI</p>
+
+    <!-- Search + Filter -->
+    <form method="GET" class="row g-2 mb-4">
+        <div class="col-md-6">
+            <input class="form-control rounded-3"
+                   type="text"
+                   name="q"
+                   placeholder="Search brand or model"
+                   value="{{ q }}">
+        </div>
+
+        <div class="col-md-4">
+            <input class="form-control rounded-3"
+                   type="number"
+                   name="min_range"
+                   placeholder="Min range (km)"
+                   value="{{ min_range }}">
+        </div>
+
+        <div class="col-md-2">
+            <button class="btn btn-dark w-100 rounded-3" type="submit">
+                Filter
+            </button>
+        </div>
+    </form>
 
     <div class="row g-3">
         {% for car in cars %}
@@ -20,6 +46,7 @@
             <div class="card shadow-sm rounded-4">
                 <div class="card-body">
                     <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
+
                     <p class="card-text mb-1"><b>Battery:</b> {{ car.battery_kwh }} kWh</p>
                     <p class="card-text mb-1"><b>Range:</b> {{ car.range_km }} km</p>
                     <p class="card-text mb-3"><b>Price:</b> ${{ car.price_usd }}</p>
@@ -32,7 +59,9 @@
         </div>
         {% endfor %}
     </div>
+
 </div>
 
 </body>
 </html>
+

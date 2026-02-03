@@ -6,7 +6,29 @@ FLASK_API = "http://127.0.0.1:5000"
 def car_list(request):
     r = requests.get(f"{FLASK_API}/api/cars")
     cars = r.json()
-    return render(request, "cars/car_list.html", {"cars": cars})
+
+    q = request.GET.get("q", "").lower()
+    min_range = request.GET.get("min_range", "")
+
+    if q:
+        cars = [
+            car for car in cars
+            if q in car["brand"].lower() or q in car["model"].lower()
+        ]
+
+    if min_range:
+        try:
+            min_range_val = float(min_range)
+            cars = [car for car in cars if car["range_km"] >= min_range_val]
+        except ValueError:
+            pass
+
+    return render(request, "cars/car_list.html", {
+        "cars": cars,
+        "q": request.GET.get("q", ""),
+        "min_range": min_range
+    })
+
 
 
 def car_detail(request, car_id):
