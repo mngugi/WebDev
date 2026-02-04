@@ -25,6 +25,13 @@ def car_list(request):
             cars = [car for car in cars if car["range_km"] >= min_range_int]
         except ValueError:
             pass
+    # scale bars nicely
+    max_range = max(car["range_km"] for car in cars) if cars else 1
+    max_battery = max(car["battery_kwh"] for car in cars) if cars else 1
+
+    for car in cars:
+        car["range_pct"] = int((car["range_km"] / max_range) * 100)
+        car["battery_pct"] = int((car["battery_kwh"] / max_battery) * 100)
 
     return render(request, "cars/car_list.html", {
         "cars": cars,
