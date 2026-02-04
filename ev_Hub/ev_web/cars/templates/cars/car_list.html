@@ -13,9 +13,11 @@
 
 <div class="container py-4">
     <h1 class="mb-2">⚡ EV Hub</h1>
+
+    <!-- Compare Cars Button -->
     <a href="/compare/" class="btn btn-outline-dark mb-3 rounded-3">
-    ⚡ Compare Cars
-</a>
+        ⚡ Compare Cars
+    </a>
 
     <p class="text-muted mb-4">Electric car catalog powered by Flask API + Django UI</p>
 
@@ -38,26 +40,43 @@
         </div>
 
         <div class="col-md-2">
-            <button class="btn btn-dark w-100 rounded-3" type="submit">
-                Filter
-            </button>
+            <button class="btn btn-dark w-100 rounded-3" type="submit">Search</button>
         </div>
     </form>
 
-    <div class="row g-3">
+    <!-- Cars Grid -->
+    <div class="row g-4">
         {% for car in cars %}
         <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
                 <div class="card-body">
+
                     <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
 
-                    <p class="card-text mb-1"><b>Battery:</b> {{ car.battery_kwh }} kWh</p>
-                    <p class="card-text mb-1"><b>Range:</b> {{ car.range_km }} km</p>
-                    <p class="card-text mb-3"><b>Price:</b> ${{ car.price_usd }}</p>
+                    <!-- Battery Bar -->
+                    <p class="mb-1"><b>Battery:</b> {{ car.battery_kwh }} kWh</p>
+                    <div class="progress mb-2" style="height: 10px;">
+                        <div class="progress-bar"
+                             role="progressbar"
+                             style="width: {{ car.battery_pct }}%;">
+                        </div>
+                    </div>
+
+                    <!-- Range Bar -->
+                    <p class="mb-1"><b>Range:</b> {{ car.range_km }} km</p>
+                    <div class="progress mb-2" style="height: 10px;">
+                        <div class="progress-bar bg-success"
+                             role="progressbar"
+                             style="width: {{ car.range_pct }}%;">
+                        </div>
+                    </div>
+
+                    <p class="mb-3"><b>Price:</b> ${{ car.price_usd }}</p>
 
                     <a href="/cars/{{ car.id }}/" class="btn btn-dark w-100 rounded-3">
                         View Details
                     </a>
+
                 </div>
             </div>
         </div>
@@ -65,7 +84,5 @@
     </div>
 
 </div>
-
 </body>
 </html>
-
