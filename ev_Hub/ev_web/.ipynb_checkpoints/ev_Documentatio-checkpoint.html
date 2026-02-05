@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>EV Hub Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            background: #f8f9fa;
+            color: #222;
+        }
+        h1, h2, h3 {
+            color: #0d6efd;
+        }
+        code {
+            background: #e9ecef;
+            padding: 4px 6px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+        pre {
+            background: #212529;
+            color: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>⚡ EV Hub – Project Documentation</h1>
+<p>
+EV Hub is a full-stack electric vehicle web application built using:
+</p>
+<ul>
+    <li><strong>Flask</strong> – REST API backend</li>
+    <li><strong>Django</strong> – Frontend & routing</li>
+    <li><strong>HTML + Bootstrap</strong> – UI</li>
+</ul>
+
+<div class="box">
+<h2>1. Project Architecture</h2>
+<p>
+The system uses a <strong>decoupled architecture</strong>:
+</p>
+<ul>
+    <li>Flask exposes EV data and calculations as JSON</li>
+    <li>Django consumes the API and renders HTML pages</li>
+</ul>
+
+<pre>
+Browser
+   ↓
+Django (Templates, Views)
+   ↓  HTTP (JSON)
+Flask API
+</pre>
+</div>
+
+<div class="box">
+<h2>2. Folder Structure</h2>
+
+<pre>
+ev_Hub/
+├── flask_api/
+│   ├── app.py
+│   └── cars_data.py
+│
+└── ev_web/
+    ├── config/
+    │   ├── settings.py
+    │   └── urls.py
+    │
+    ├── cars/
+    │   ├── views.py
+    │   ├── urls.py
+    │   └── templates/
+    │       └── cars/
+    │           ├── car_list.html
+    │           ├── car_details.html
+    │           └── compare.html
+</pre>
+</div>
+
+<div class="box">
+<h2>3. Flask API Responsibilities</h2>
+
+<ul>
+    <li>Provide EV car data</li>
+    <li>Calculate trip feasibility</li>
+    <li>Return JSON responses</li>
+</ul>
+
+<h3>Example Endpoint</h3>
+<pre>
+GET /api/cars
+GET /api/cars/&lt;id&gt;
+GET /api/range-check?car_id=1&amp;trip_km=120
+</pre>
+</div>
+
+<div class="box">
+<h2>4. Django Responsibilities</h2>
+
+<ul>
+    <li>Render UI pages</li>
+    <li>Handle user input (forms)</li>
+    <li>Call Flask API using <code>requests</code></li>
+</ul>
+
+<h3>Example Django View</h3>
+<pre>
+def car_list(request):
+    r = requests.get("http://127.0.0.1:5000/api/cars")
+    cars = r.json()
+    return render(request, "cars/car_list.html", {"cars": cars})
+</pre>
+</div>
+
+<div class="box">
+<h2>5. Car List Page</h2>
+
+<p>
+Displays:
+</p>
+<ul>
+    <li>EV brand and model</li>
+    <li>Battery percentage</li>
+    <li>Estimated range</li>
+</ul>
+
+<h3>Battery Bar Logic</h3>
+<pre>
+&lt;div class="progress"&gt;
+    &lt;div class="progress-bar"
+         style="width: {{ car.battery_pct }}%;"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+
+<div class="box">
+<h2>6. Range Check Feature</h2>
+
+<p>
+Users enter trip distance in kilometers.  
+The system checks if the selected EV can complete the trip.
+</p>
+
+<h3>Logic</h3>
+<ul>
+    <li>User enters distance</li>
+    <li>Django sends request to Flask</li>
+    <li>Flask compares range vs trip</li>
+</ul>
+
+<pre>
+if trip_km <= car_range:
+    return "Trip possible"
+else:
+    return "Charging required"
+</pre>
+</div>
+
+<div class="box">
+<h2>7. Car Comparison Feature</h2>
+
+<p>
+Users can compare two EVs based on:
+</p>
+<ul>
+    <li>Battery capacity</li>
+    <li>Range</li>
+    <li>Trip feasibility</li>
+</ul>
+
+<h3>Compare Page URL</h3>
+<pre>
+/compare/
+</pre>
+</div>
+
+<div class="box">
+<h2>8. Technologies Used</h2>
+
+<ul>
+    <li>Python 3.13</li>
+    <li>Flask</li>
+    <li>Django 6</li>
+    <li>Bootstrap 5</li>
+    <li>REST APIs</li>
+</ul>
+</div>
+
+<div class="box">
+<h2>9. Future Improvements</h2>
+
+<ul>
+    <li>User authentication</li>
+    <li>Charging station map</li>
+    <li>Charts & analytics</li>
+    <li>Database integration</li>
+</ul>
+</div>
+
+<h2>🚀 Conclusion</h2>
+<p>
+EV Hub demonstrates a clean separation between backend logic and frontend presentation,
+making it scalable, secure, and easy to extend.
+</p>
+
+</body>
+</html>
