@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EV Hub MSc Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap for clean academic layout -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            line-height: 1.7;
+        }
+        .section {
+            background: #ffffff;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        pre {
+            background: #f1f3f5;
+            padding: 1rem;
+            border-radius: 6px;
+        }
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container py-5">
+
+    <!-- TITLE -->
+    <div class="section text-center">
+        <h1>EV Hub</h1>
+        <h4 class="text-muted">
+            A Distributed Web System for Electric Vehicle Analysis
+        </h4>
+        <p class="mt-3">
+            MSc Computing Science – Project Documentation
+        </p>
+    </div>
+
+    <!-- ABSTRACT -->
+    <div class="section">
+        <h2>Abstract</h2>
+        <p>
+            This project presents <strong>EV Hub</strong>, a distributed web-based
+            system designed to analyze and compare electric vehicles using a
+            decoupled architecture composed of a Flask-based REST API and a
+            Django-based web interface. The system enables users to explore
+            electric vehicle specifications, evaluate range feasibility based
+            on travel distance, and perform side-by-side comparisons of vehicles.
+            The project demonstrates modular design principles, scalability, and
+            practical relevance to modern electric mobility challenges.
+        </p>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <div class="section">
+        <h2>1. Introduction</h2>
+        <p>
+            The global transition toward electric vehicles (EVs) has introduced
+            new challenges related to battery capacity, driving range, and
+            consumer decision-making. While EV adoption continues to grow,
+            potential users often experience uncertainty regarding whether a
+            particular vehicle can meet their daily or long-distance travel
+            requirements.
+        </p>
+        <p>
+            Existing vehicle comparison platforms typically present static
+            specifications without evaluating range feasibility in relation to
+            user-defined travel distances. This limitation motivates the
+            development of EV Hub, a system that combines vehicle data with
+            dynamic range analysis.
+        </p>
+    </div>
+
+    <!-- PROBLEM STATEMENT -->
+    <div class="section">
+        <h2>2. Problem Statement</h2>
+        <p>
+            Consumers lack accessible and interactive tools that integrate
+            electric vehicle specifications with real-time range feasibility
+            analysis. Most existing platforms provide static data without
+            assessing whether a selected vehicle can satisfy a user's specific
+            travel needs, contributing to range anxiety and suboptimal
+            purchasing decisions.
+        </p>
+    </div>
+
+    <!-- OBJECTIVES -->
+    <div class="section">
+        <h2>3. Project Objectives</h2>
+        <ul>
+            <li>Design a modular system using a decoupled API-based architecture</li>
+            <li>Provide dynamic electric vehicle range feasibility analysis</li>
+            <li>Enable side-by-side comparison of electric vehicles</li>
+            <li>Ensure scalability and maintainability of the system</li>
+        </ul>
+    </div>
+
+    <!-- ARCHITECTURE -->
+    <div class="section">
+        <h2>4. System Architecture</h2>
+        <p>
+            EV Hub follows a distributed client-server architecture with a clear
+            separation of concerns between data processing and presentation
+            layers.
+        </p>
+
+        <ul>
+            <li><strong>Flask API:</strong> Handles vehicle data retrieval and
+                range calculations</li>
+            <li><strong>Django UI:</strong> Manages user interaction and data
+                presentation</li>
+            <li><strong>Communication:</strong> RESTful HTTP requests over
+                localhost</li>
+        </ul>
+
+        <pre>
+Browser
+   ↓
+Django Web Interface (Port 8000)
+   ↓
+Flask REST API (Port 5000)
+        </pre>
+    </div>
+
+    <!-- TECHNOLOGIES -->
+    <div class="section">
+        <h2>5. Technologies Used</h2>
+        <ul>
+            <li>Python 3.13</li>
+            <li>Django 6.0</li>
+            <li>Flask</li>
+            <li>Bootstrap 5</li>
+            <li>Chart.js</li>
+            <li>RESTful APIs</li>
+        </ul>
+
+        <p>
+            Django was selected for its robust templating and routing
+            capabilities, while Flask was chosen for its lightweight API design.
+            This combination allows independent scaling and future integration
+            with external services.
+        </p>
+    </div>
+
+    <!-- IMPLEMENTATION -->
+    <div class="section">
+        <h2>6. Implementation Details</h2>
+
+        <h3>6.1 Data Retrieval</h3>
+        <p>
+            The Django application retrieves vehicle data by issuing HTTP
+            requests to the Flask API, which responds with JSON-formatted data.
+        </p>
+
+        <h3>6.2 Range Feasibility Analysis</h3>
+        <pre>
+if trip_km <= vehicle_range:
+    result = "Trip possible"
+else:
+    result = "Charging required"
+        </pre>
+
+        <p>
+            This logic enables immediate feedback regarding whether a selected
+            electric vehicle can complete a specified journey without recharging.
+        </p>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="section">
+        <h2>7. Results and Evaluation</h2>
+        <p>
+            The system successfully integrates a Flask API with a Django-based
+            frontend to deliver real-time vehicle data and range analysis. Users
+            can explore vehicle listings, compare two vehicles, and evaluate
+            trip feasibility with minimal latency.
+        </p>
+    </div>
+
+    <!-- LIMITATIONS -->
+    <div class="section">
+        <h2>8. Limitations</h2>
+        <ul>
+            <li>Static dataset of electric vehicles</li>
+            <li>No real-time traffic or weather data integration</li>
+            <li>Localhost-based deployment</li>
+        </ul>
+    </div>
+
+    <!-- FUTURE WORK -->
+    <div class="section">
+        <h2>9. Future Work</h2>
+        <ul>
+            <li>Integration with real-world charging station APIs</li>
+            <li>Machine learning-based range prediction</li>
+            <li>User accounts and personalized recommendations</li>
+            <li>Cloud-based deployment and scalability</li>
+        </ul>
+    </div>
+
+    <!-- CONCLUSION -->
+    <div class="section">
+        <h2>10. Conclusion</h2>
+        <p>
+            EV Hub demonstrates the feasibility of a modular, scalable web-based
+            system for electric vehicle analysis. The project highlights the
+            benefits of separating data processing and presentation layers while
+            addressing practical challenges in electric vehicle adoption.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
